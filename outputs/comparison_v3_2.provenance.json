@@ -1,0 +1,55 @@
+{
+  "config": {
+    "model_name": "Qwen/Qwen3-1.7B",
+    "cache_dir": "C:/Users/AHMED Wael/.cache/huggingface/hub",
+    "local_model_path": "C:/Users/AHMED Wael/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B/snapshots/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "dataset_path": "data/v3_2/clean_dataset_v3_2.jsonl",
+    "split_dir": "data/v3_2/splits",
+    "processed_dir": "data/processed/tutor_v3_2",
+    "output_dir": "outputs/adapter_v3_2",
+    "evaluation_questions": "data/v3_2/evaluation_questions.json",
+    "comparison_output": "outputs/comparison_v3_2.json",
+    "seed": 42,
+    "validation_fraction": 0.1,
+    "split_strategy": "random",
+    "max_seq_length": 512,
+    "quantization": {
+      "load_in_4bit": true,
+      "quant_type": "nf4",
+      "double_quant": true
+    },
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ]
+    },
+    "training": {
+      "batch_size": 1,
+      "eval_batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "epochs": 1,
+      "learning_rate": 0.0001,
+      "warmup_ratio": 0.1,
+      "lr_scheduler_type": "cosine",
+      "gradient_checkpointing": true,
+      "logging_steps": 5,
+      "save_steps": 27,
+      "save_total_limit": 2,
+      "optimizer": "paged_adamw_8bit",
+      "tensorboard": false
+    },
+    "push_to_hub": false,
+    "hub_model_id": null
+  },
+  "adapter": "outputs/adapter_v3_2",
+  "questions_sha256": "a30cd6bbd699d793123b7bdc197af7c9194cca216745b76e1906b477858c67b2",
+  "split_sha256": {
+    "train": "f49f41a22de98ed5ed04e1a79ce2a0b8613f646e2b567d4e3f20cfca870c7a41",
+    "validation": "95ecaf5af0d10829031de51069c7faca972da1d662b948a02633579c202c07af",
+    "test": "e653d7b9c10719e6e1bdec129675e626bd36f2e07632e61df06aa596c534b63f"
+  }
+}

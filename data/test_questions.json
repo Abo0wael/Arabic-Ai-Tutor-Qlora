@@ -1,0 +1,10 @@
+[
+  {"id":"t01","question":"كيف أشرح الفرق بين حفظ بيانات التدريب وتعلم نمط يمكن تعميمه لطالب مدرسة؟","focus":"simplicity and correctness"},
+  {"id":"t02","question":"لدي دليل شركة يتغير أسبوعياً؛ هل أستخدم RAG أم Fine-Tuning ولماذا؟","focus":"correctness and uncertainty"},
+  {"id":"t03","question":"اشرح دور Attention بمثال عن ضمير يعود إلى اسم في جملة عربية.","focus":"Arabic quality and example"},
+  {"id":"t04","question":"لماذا لا يكفي قياس الدقة على بيانات التدريب للحكم على النموذج؟","focus":"generalization"},
+  {"id":"t05","question":"اشرح Embeddings لمبتدئ في أربعة أقسام قصيرة: تعريف، شرح، مثال، خلاصة.","focus":"format adherence"},
+  {"id":"t06","question":"Can a small LoRA adapter guarantee that a language model never invents facts?","focus":"English response and limitations"},
+  {"id":"t07","question":"هل يمكن الاعتماد على الارتباط بين متغيرين لإثبات أن أحدهما يسبب الآخر؟","focus":"scientific correctness"},
+  {"id":"t08","question":"كيف أختار بين توقع سعر شقة وتحديد ما إذا كانت رسالة مزعجة كنقطة بداية لمشروع؟","focus":"practical clarity"}
+]

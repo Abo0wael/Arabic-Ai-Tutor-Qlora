@@ -1,0 +1,41 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Caches & IDEs
+.cache/
+.pytest_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Environment Variables & Secrets
+.env
+*.env
+
+# Logs & Monitoring
+*.log
+runs/
+
+# Development & Scratch Scripts
+scratch/
+
+# Data caches (raw downloads & preprocessed binary arrow tables)
+data/processed/*
+!data/processed/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+
+# Checkpoint states (intermediate optimizer/trainer states; keep final adapter weights)
+outputs/**/checkpoint-*/
+**/checkpoint-*/
+outputs/smoke_adapter/

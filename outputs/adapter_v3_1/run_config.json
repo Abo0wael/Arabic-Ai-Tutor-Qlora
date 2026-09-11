@@ -1,0 +1,43 @@
+{
+  "model_name": "Qwen/Qwen3-1.7B",
+  "cache_dir": "C:/Users/AHMED Wael/.cache/huggingface/hub",
+  "local_model_path": "C:/Users/AHMED Wael/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B/snapshots/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "dataset_path": "data/processed/clean_dataset.jsonl",
+  "split_dir": "data/splits",
+  "processed_dir": "data/processed/tutor_real",
+  "output_dir": "outputs/adapter_v3_1",
+  "seed": 42,
+  "validation_fraction": 0.1,
+  "split_strategy": "random",
+  "max_seq_length": 512,
+  "quantization": {
+    "load_in_4bit": true,
+    "quant_type": "nf4",
+    "double_quant": true
+  },
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ]
+  },
+  "training": {
+    "batch_size": 1,
+    "eval_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "warmup_ratio": 0.03,
+    "gradient_checkpointing": true,
+    "logging_steps": 5,
+    "save_steps": 27,
+    "save_total_limit": 2,
+    "optimizer": "paged_adamw_8bit",
+    "tensorboard": false
+  },
+  "push_to_hub": false,
+  "hub_model_id": null
+}

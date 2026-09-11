@@ -1,0 +1,114 @@
+{
+  "counts": {
+    "train": 426,
+    "validation": 50,
+    "test": 25
+  },
+  "structure": {
+    "total": 501,
+    "invalid": 0,
+    "duplicates": 0
+  },
+  "crossing_concept_or_text_components": 0,
+  "near_duplicate_threshold": "question OR answer word trigram Jaccard >= 0.8",
+  "max_tokens": 453,
+  "over_limit": 0,
+  "behaviors": {
+    "train": {
+      "vague_clarification": 25,
+      "uncertainty_scope": 12,
+      "follow_up": 12,
+      "code_implementation": 15,
+      "troubleshooting": 53,
+      "short_direct": 81,
+      "comparison": 21,
+      "misconception": 59,
+      "beginner": 30,
+      "detailed": 29,
+      "analogy": 25,
+      "practical_example": 30,
+      "explicit_structured": 10,
+      "intermediate": 24
+    },
+    "validation": {
+      "short_direct": 7,
+      "beginner": 6,
+      "intermediate": 4,
+      "analogy": 4,
+      "practical_example": 4,
+      "misconception": 7,
+      "troubleshooting": 7,
+      "comparison": 2,
+      "explicit_structured": 3,
+      "detailed": 6
+    },
+    "test": {
+      "short_direct": 4,
+      "intermediate": 2,
+      "detailed": 4,
+      "analogy": 1,
+      "practical_example": 1,
+      "misconception": 4,
+      "troubleshooting": 4,
+      "comparison": 1,
+      "explicit_structured": 2,
+      "beginner": 2
+    }
+  },
+  "concepts": {
+    "train": [
+      "anomaly_detection",
+      "baseline_model",
+      "batch_norm_vs_layer_norm",
+      "batch_size_and_accumulation",
+      "context_window",
+      "correlation_vs_causation",
+      "cross_validation",
+      "data_leakage",
+      "descriptive_statistics",
+      "dropout",
+      "embeddings",
+      "evaluation_benchmarks",
+      "feature_engineering",
+      "gradient_descent",
+      "lora_and_qlora",
+      "loss_functions",
+      "missing_values_imputation",
+      "optimizers_adamw_vs_sgd",
+      "outliers_detection",
+      "prompt_engineering",
+      "quantization_nf4_int8",
+      "rag_vs_finetuning",
+      "recommendation_systems",
+      "regularization_l1_l2",
+      "reinforcement_learning_rlhf",
+      "reproducibility",
+      "self_attention",
+      "sentiment_analysis",
+      "temperature_and_sampling",
+      "tokenization",
+      "transformer_encoder_vs_decoder",
+      "unannotated",
+      "underfitting",
+      "vanishing_and_exploding_gradients",
+      "vector_database"
+    ],
+    "validation": [
+      "accuracy_and_imbalance",
+      "activation_functions",
+      "learning_rate",
+      "precision_recall_f1"
+    ],
+    "test": [
+      "hallucination",
+      "overfitting"
+    ]
+  },
+  "source_sha256": "c7877849988774735fd6ec46d9864b2c93de7ac4d9a2c1ec12c4449bffe7a4de",
+  "warnings": [
+    "Unannotated examples are retained in training; manually annotate them before claiming semantic independence.",
+    "Scientific accuracy and language quality require human review; lexical checks are not proof.",
+    "Old V3.1 reports are legacy heuristic results, not independent factual scores."
+  ],
+  "training_started": false
+}

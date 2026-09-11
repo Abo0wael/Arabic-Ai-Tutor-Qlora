@@ -1,0 +1,11 @@
+# PyTorch with CUDA: install according to your CUDA version (e.g. pip install torch --index-url https://download.pytorch.org/whl/cu128)
+torch>=2.6.0
+transformers>=4.50.0,<5.0
+datasets>=3.6.0
+peft>=0.15.0,<0.20
+accelerate>=1.0.0,<2.0
+bitsandbytes>=0.46.0
+pyarrow==19.0.1
+streamlit>=1.45.0
+pandas>=2.2.0
+PyYAML>=6.0

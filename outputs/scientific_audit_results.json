@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "0",
+    "question": "إذا استخدمت LoRA Target Modules في حالة: استهداف q_proj وv_proj لتجربة خفيفة. فما الذي يجوز استنتاجه وما الذي لا يجوز؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة. تذكر أيضاً أن الاسترجاع قد يفقد بعض التخصيص.",
+    "tuned_summary": "اذكر النتيجة وحدودها وما يحتاج إلى تحقق إضافي."
+  },
+  {
+    "id": "1",
+    "question": "إذا استخدمت Data Leakage في حالة: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. فما الذي يجوز استنتاجه وما الذي لا يجوز؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. تذكر أيضاً أن الاستخدام غير المحدد قد يغير سلوك النظام.",
+    "tuned_summary": "اذكر النتيجة وحدودها وما يحتاج إلى تحقق إضافي."
+  },
+  {
+    "id": "2",
+    "question": "أحتاج شرحاً في دقيقة عن Reranking يذكر دوره في استرجاع دليل خارجي ذي صلة قبل التوليد وحداً مهماً.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "رتبة عناوين من الأسئلة بعد فحصها.",
+    "tuned_summary": "تعريف واحد ومثال وحدّ واحد أفضل من قائمة مصطلحات بلا معنى."
+  },
+  {
+    "id": "3",
+    "question": "قد يفشل LoRA Target Modules لأن استهداف طبقات أكثر يرفع السعة والذاكرة وقد يفرط في الملاءمة. كيف أكتشف ذلك وأتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "ربط module 2-4 بحالة 2-4 من training.",
+    "tuned_summary": "اكتشف الفشل بعينة أخطاء، ثم أصلح السبب أو استخدم بديلاً أبسط."
+  },
+  {
+    "id": "4",
+    "question": "سمعت مصطلح DAX Measure في حالة مثل: مقياس إجمالي المبيعات يتغير مع مرشح السنة. ما معناه ببساطة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "tuned_summary": "افهم وظيفة DAX Measure أولاً، ثم اختبره على بيانات مناسبة."
+  },
+  {
+    "id": "5",
+    "question": "طبقت In-Context Learning في حالة: عرض مثالين للتنسيق ثم طلب جواب ثالث. ولم تتحسن النتيجة. كيف أشخص السبب؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "في حالة مثل: عرض مثالين للتنسيق ثم طلب جواب ثالث. راجع عينة من الأخطاء بدلاً من الاكتفاء برقم واحد.",
+    "tuned_summary": "غيّر عاملاً واحداً في كل تجربة وسجّل النتيجة لتعرف سبب التحسن أو التراجع."
+  },
+  {
+    "id": "6",
+    "question": "أحتاج شرحاً في دقيقة عن DAX Measure يذكر دوره في تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص وحداً مهماً.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "مؤشر يحسب أرباح كل عمل مدفوع بأرقام حقيقية.",
+    "tuned_summary": "تعريف واحد ومثال وحدّ واحد أفضل من قائمة مصطلحات بلا معنى."
+  },
+  {
+    "id": "7",
+    "question": "لتنفيذ حالة مثل: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. ما المدخلات التي يحتاجها Arabic NLP؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. تحقق من الجودة والتغطية؛ التخزين والنقل قد يضيفان رسماً.",
+    "tuned_summary": "جودة المدخلات وطريقة جمعها جزء من الحل."
+  },
+  {
+    "id": "8",
+    "question": "مبتدئ تعامل مع Transformer Encoder وتجاهل أن ليس مولداً ذاتياً افتراضياً من دون رأس أو decoder مناسب. ما الخطأ في طريقته؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استرجاع اسم فصل من سلسلة تغطي كل كلمة.",
+    "tuned_summary": "راجع البيانات وخط الأساس وحالات الخطأ قبل تغيير التقنية."
+  },
+  {
+    "id": "9",
+    "question": "رتب خطوات لفحص أو تطبيق Unsupervised Learning ثم تقييم حالة: تجميع العملاء بحسب سلوك الشراء.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء.",
+    "tuned_summary": "لا توسع الحل قبل نجاح الاختبار المحدود."
+  },
+  {
+    "id": "10",
+    "question": "لدي هذا السيناريو: تدريب نموذج أطول سياقاً على GPU محدود. كيف أقرر إن كان Gradient Checkpointing جزءاً مناسباً من الحل؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تدريب نموذج أطول سياق بسعة 2048 steps على GPU محدود.",
+    "tuned_summary": "جرّب نطاقاً صغيراً، وقِس النتيجة قبل توسيع المشروع."
+  },
+  {
+    "id": "11",
+    "question": "مبتدئ تعامل مع Gradient Checkpointing وتجاهل أن يوفر الذاكرة مقابل وقت حساب إضافي. ما الخطأ في طريقته؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تثبيت حالة رمز كل خطوة تقسيماً.",
+    "tuned_summary": "راجع البيانات وخط الأساس وحالات الخطأ قبل تغيير التقنية."
+  },
+  {
+    "id": "12",
+    "question": "في المثال التالي: تجميع العملاء بحسب سلوك الشراء. أين تظهر فكرة Unsupervised Learning؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء.",
+    "tuned_summary": "المثال يوضح الفكرة، لكن النتيجة الفعلية تحتاج قياساً."
+  },
+  {
+    "id": "13",
+    "question": "قرّب لي Arabic NLP بتشبيه بسيط، ثم اربطه بهذا المثال: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة.",
+    "tuned_summary": "التشبيه يسهّل البداية، ثم نرجع إلى التعريف التقني عند التطبيق."
+  },
+  {
+    "id": "14",
+    "question": "متى يصبح Transformer Encoder مهماً في حالة مثل: ترميز جملة قبل تصنيفها. وكيف أتعامل معه؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "ترميز جملة قبل تصنيفها.",
+    "tuned_summary": "حدّد الهدف والقيود ثم قارن بخط أساس أبسط."
+  },
+  {
+    "id": "15",
+    "question": "سمعت مصطلح Reranking في حالة مثل: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. ما معناه ببساطة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "tuned_summary": "افهم وظيفة Reranking أولاً، ثم اختبره على بيانات مناسبة."
+  },
+  {
+    "id": "16",
+    "question": "عند دراسة أثر Transformer Encoder على ربط عناصر التسلسل بالسياق المناسب، كيف أقيس النتيجة بمقارنة عادلة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تحويل سؤال من اللغة الإنجليزية إلى العربية بواسطة Transformer Encoder.",
+    "tuned_summary": "اجمع القياس الكمي مع مراجعة عينات الأخطاء."
+  },
+  {
+    "id": "17",
+    "question": "طبقت Gradient Checkpointing في حالة: تدريب نموذج أطول سياقاً على GPU محدود. ولم تتحسن النتيجة. كيف أشخص السبب؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "في حالة مثل: تدريب نموذج أطول سياق على GPU محدود. راجع عينة من الأخطاء بدلاً من الاكتفاء برقم واحد.",
+    "tuned_summary": "غيّر عاملاً واحداً في كل تجربة وسجّل النتيجة لتعرف سبب التحسن أو التراجع."
+  },
+  {
+    "id": "18",
+    "question": "عند دراسة أثر In-Context Learning على استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة، كيف أقيس النتيجة بمقارنة عادلة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "طلب يصف خبراء تقنية مضبوطة.",
+    "tuned_summary": "اجمع القياس الكمي مع مراجعة عينات الأخطاء."
+  },
+  {
+    "id": "19",
+    "question": "رتب خطوات لفحص أو تطبيق DAX Measure ثم تقييم حالة: مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "tuned_summary": "لا توسع الحل قبل نجاح الاختبار المحدود."
+  },
+  {
+    "id": "20",
+    "question": "متى يصبح DAX Measure مهماً في حالة مثل: مقياس إجمالي المبيعات يتغير مع مرشح السنة. وكيف أتعامل معه؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "tuned_summary": "حدّد الهدف والقيود ثم قارن بخط أساس أبسط."
+  },
+  {
+    "id": "21",
+    "question": "لدي هذا السيناريو: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. كيف أقرر إن كان Arabic NLP جزءاً مناسباً من الحل؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة.",
+    "tuned_summary": "جرّب نطاقاً صغيراً، وقِس النتيجة قبل توسيع المشروع."
+  },
+  {
+    "id": "22",
+    "question": "في مشروع هدفه تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص، كيف أختار بين DAX Measure وCalculated Column؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "حساب مبيعات كل عملاء في كل شهر. وقارن النتيجة ببديل يستخدم Calibrated Column أو Calibrated Table بدلاً.",
+    "tuned_summary": "اختر بناءً على هدف المسألة، لا على شهرة المصطلح."
+  },
+  {
+    "id": "23",
+    "question": "عند دراسة أثر Data Leakage على بناء نظام ذكي مسؤول يمكن قياسه ومراجعته، كيف أقيس النتيجة بمقارنة عادلة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "حساب التوزيعات الرمادية بعد اختيار خوارزمية.",
+    "tuned_summary": "اجمع القياس الكمي مع مراجعة عينات الأخطاء."
+  },
+  {
+    "id": "24",
+    "question": "عند دراسة أثر Reranking على استرجاع دليل خارجي ذي صلة قبل التوليد، كيف أقيس النتيجة بمقارنة عادلة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "رتبة القسم مع ذكر الرموز الدالة.",
+    "tuned_summary": "اجمع القياس الكمي مع مراجعة عينات الأخطاء."
+  },
+  {
+    "id": "25",
+    "question": "لتنفيذ حالة مثل: مقياس إجمالي المبيعات يتغير مع مرشح السنة. ما المدخلات التي يحتاجها DAX Measure؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة. تحقق من الجودة والتغطية؛ التكرار والتنبيه لا تعني خطأً واحداً.",
+    "tuned_summary": "جودة المدخلات وطريقة جمعها جزء من الحل."
+  },
+  {
+    "id": "26",
+    "question": "نشرت حلاً يستخدم Data Leakage في حالة: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. ما إشارات التراجع أو سوء الاستخدام التي أراقبها؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "tuned_summary": "ضع حدوداً وتنبيهات ومراجعة بشرية للحالات عالية الأثر."
+  },
+  {
+    "id": "27",
+    "question": "اشرح Arabic NLP لمبتدئ يريد معالجة اللغة وتقييم مخرجاتها في سياق واضح.",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "استخراج اسم من بегض وسياق علاقاته.",
+    "tuned_summary": "arabic-nlp مفهوم له معنى محدد ولا يكفي اسمه للحكم على جودة الحل."
+  },
+  {
+    "id": "28",
+    "question": "قبل بناء قرار يتأثر بـ Data Leakage في سياق بناء نظام ذكي مسؤول يمكن قياسه ومراجعته، ما الافتراضات والحدود التي أوثقها؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حتى في مثال مثل: ربط الحالة ببيانات خارجية قبل جمع التقارير. اختبر الحالات غير المعتادة وراقب الفشل.",
+    "tuned_summary": "تعامل مع Data Leakage بتحقق مستقل، ووثّق ما يعنيه وما لا يثبته."
+  },
+  {
+    "id": "29",
+    "question": "لدي هذا السيناريو: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. كيف أقرر إن كان Data Leakage جزءاً مناسباً من الحل؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "tuned_summary": "جرّب نطاقاً صغيراً، وقِس النتيجة قبل توسيع المشروع."
+  },
+  {
+    "id": "30",
+    "question": "في مشروع هدفه معالجة اللغة وتقييم مخرجاتها في سياق واضح، كيف أختار بين Arabic NLP وEnglish NLP؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تحليل تذكرة من العربية ثم ربط النتيجة بتحليل مستقل.",
+    "tuned_summary": "اختر بناءً على هدف المسألة، لا على شهرة المصطلح."
+  },
+  {
+    "id": "31",
+    "question": "قبل بناء قرار يتأثر بـ Unsupervised Learning في سياق تعلم نمط قابل للتعميم من البيانات، ما الافتراضات والحدود التي أوثقها؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حتى في مثال مثل: تحديد فئة كل رمز بواسطة عناصر جزئيات الرسم البياني. اختبر الحالات غير المعتادة وراقب الفشل.",
+    "tuned_summary": "تعامل مع Unsupervised Learning بتحقق مستقل، ووثّق ما يعنيه وما لا يثبته."
+  },
+  {
+    "id": "32",
+    "question": "رتب خطوات لفحص أو تطبيق Arabic NLP ثم تقييم حالة: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة.",
+    "tuned_summary": "لا توسع الحل قبل نجاح الاختبار المحدود."
+  },
+  {
+    "id": "33",
+    "question": "سمعت مصطلح Unsupervised Learning في حالة مثل: تجميع العملاء بحسب سلوك الشراء. ما معناه ببساطة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء.",
+    "tuned_summary": "افهم وظيفة Unsupervised Learning أولاً، ثم اختبره على بيانات مناسبة."
+  },
+  {
+    "id": "34",
+    "question": "قد يفشل Unsupervised Learning لأن المجموعة المكتشفة ليست حقيقة موضوعية وتحتاج تفسيراً. كيف أكتشف ذلك وأتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استرجاع مشكلات سابقة بتنسيق قابل للتوسع.",
+    "tuned_summary": "اكتشف الفشل بعينة أخطاء، ثم أصلح السبب أو استخدم بديلاً أبسط."
+  },
+  {
+    "id": "35",
+    "question": "لتنفيذ حالة مثل: تدريب نموذج أطول سياقاً على GPU محدود. ما المدخلات التي يحتاجها Gradient Checkpointing؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تدريب نموذج أطول سياق على GPU محدود. تحقق من الجودة والتغطية؛ قد لا تستطيع تحويل حسابات الرموز إلى فعليات موثوقة.",
+    "tuned_summary": "جودة المدخلات وطريقة جمعها جزء من الحل."
+  },
+  {
+    "id": "36",
+    "question": "طبقت Transformer Encoder في حالة: ترميز جملة قبل تصنيفها. ولم تتحسن النتيجة. كيف أشخص السبب؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "في حالة مثل: ترميز جملة قبل تصنيفها. راجع عينة من الأخطاء بدلاً من الاكتفاء برقم واحد.",
+    "tuned_summary": "غيّر عاملاً واحداً في كل تجربة وسجّل النتيجة لتعرف سبب التحسن أو التراجع."
+  },
+  {
+    "id": "37",
+    "question": "أحتاج شرحاً في دقيقة عن Data Leakage يذكر دوره في بناء نظام ذكي مسؤول يمكن قياسه ومراجعته وحداً مهماً.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "رفع السؤال بعد إدخال الرمز بشكل مباشر.",
+    "tuned_summary": "تعريف واحد ومثال وحدّ واحد أفضل من قائمة مصطلحات بلا معنى."
+  },
+  {
+    "id": "38",
+    "question": "اشرح Data Leakage لمبتدئ يريد بناء نظام ذكي مسؤول يمكن قياسه ومراجعته.",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "تحميل بيانات من ملفات CSV قبل أن نحسب المتوسطات المناسبة.",
+    "tuned_summary": "Data Leakage مفهوم له معنى محدد ولا يكفي اسمه للحكم على جودة الحل."
+  },
+  {
+    "id": "39",
+    "question": "لتنفيذ حالة مثل: تجميع العملاء بحسب سلوك الشراء. ما المدخلات التي يحتاجها Unsupervised Learning؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء. تحقق من الجودة والتغطية؛ التجميع العشوائي قد يضلل ولا يعطي نتائج مستقلة.",
+    "tuned_summary": "جودة المدخلات وطريقة جمعها جزء من الحل."
+  },
+  {
+    "id": "40",
+    "question": "عند دراسة أثر Unsupervised Learning على تعلم نمط قابل للتعميم من البيانات، كيف أقيس النتيجة بمقارنة عادلة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استعادة فئات الأشخاص المشتركين عبر كластينغ.",
+    "tuned_summary": "اجمع القياس الكمي مع مراجعة عينات الأخطاء."
+  },
+  {
+    "id": "41",
+    "question": "متى يصبح LoRA Target Modules مهماً في حالة مثل: استهداف q_proj وv_proj لتجربة خفيفة. وكيف أتعامل معه؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة.",
+    "tuned_summary": "حدّد الهدف والقيود ثم قارن بخط أساس أبسط."
+  },
+  {
+    "id": "42",
+    "question": "قبل بناء قرار يتأثر بـ Transformer Encoder في سياق ربط عناصر التسلسل بالسياق المناسب، ما الافتراضات والحدود التي أوثقها؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حتى في مثال مثل: ربط اسم مع بيان فعلي. اختبر الحالات غير المعتادة وراقب الفشل.",
+    "tuned_summary": "تعامل مع Transformer Encoder بتحقق مستقل، ووثّق ما يعنيه وما لا يثبته."
+  },
+  {
+    "id": "43",
+    "question": "قبل بناء قرار يتأثر بـ LoRA Target Modules في سياق تخصيص سلوك نموذج مدرب مسبقاً بكفاءة، ما الافتراضات والحدود التي أوثقها؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حتى في مثال مثل: تحديث حساب ذي أساس مدرب مسبقاً بالتنبيهات. اختبر الحالات غير المعتادة وراقب الفشل.",
+    "tuned_summary": "تعامل مع LoRA بتحقق مستقل، ووثّق ما يعنيه وما لا يثبته."
+  },
+  {
+    "id": "44",
+    "question": "قرّب لي Transformer Encoder بتشبيه بسيط، ثم اربطه بهذا المثال: ترميز جملة قبل تصنيفها.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "ترميز جملة قبل تصنيفها.",
+    "tuned_summary": "التشبيه يسهّل البداية، ثم نرجع إلى التعريف التقني عند التطبيق."
+  },
+  {
+    "id": "45",
+    "question": "قبل بناء قرار يتأثر بـ In-Context Learning في سياق استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة، ما الافتراضات والحدود التي أوثقها؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حتى في مثال مثل: استرجاع اسم فريق بالقرب من query. اختبر الحالات غير المعتادة وراقب الفشل.",
+    "tuned_summary": "تعامل مع In-Context Learning بتحقق مستقل، ووثّق ما يعنيه وما لا يثبته."
+  },
+  {
+    "id": "46",
+    "question": "أحاول بناء نظام ذكي مسؤول يمكن قياسه ومراجعته. ما دور Data Leakage في فهم هذا العمل أو تنفيذه؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "استرجاع قائمة من المستخدمين بعد دعم طلب جديد.",
+    "tuned_summary": "تعامل مع Data Leakage وفق هدف المشكلة والبيانات والقياس المتاح."
+  },
+  {
+    "id": "47",
+    "question": "أريد فحص Unsupervised Learning في هذا المثال: تجميع العملاء بحسب سلوك الشراء. ما أول خطوة؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء.",
+    "tuned_summary": "التجربة المحدودة تكشف مبكراً إن كانت الفكرة مناسبة."
+  },
+  {
+    "id": "48",
+    "question": "رتب خطوات لفحص أو تطبيق Transformer Encoder ثم تقييم حالة: ترميز جملة قبل تصنيفها.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "ترميز جملة قبل تصنيفها.",
+    "tuned_summary": "لا توسع الحل قبل نجاح الاختبار المحدود."
+  },
+  {
+    "id": "49",
+    "question": "أحاول معالجة اللغة وتقييم مخرجاتها في سياق واضح. ما دور Arabic NLP في فهم هذا العمل أو تنفيذه؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "تحويل الفقرة إلى قائمة Keywords.",
+    "tuned_summary": "تعامل مع Arabic NLP بفهم أعمق قبل قياس its success."
+  },
+  {
+    "id": "50",
+    "question": "نشرت حلاً يستخدم LoRA Target Modules في حالة: استهداف q_proj وv_proj لتجربة خفيفة. ما إشارات التراجع أو سوء الاستخدام التي أراقبها؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة.",
+    "tuned_summary": "ضع حدوداً وتنبيهات ومراجعة بشرية للحالات عالية الأثر."
+  },
+  {
+    "id": "51",
+    "question": "لدي هذا السيناريو: استهداف q_proj وv_proj لتجربة خفيفة. كيف أقرر إن كان LoRA Target Modules جزءاً مناسباً من الحل؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة.",
+    "tuned_summary": "جرّب نطاقاً صغيراً، وقِس النتيجة قبل توسيع المشروع."
+  },
+  {
+    "id": "52",
+    "question": "قرّب لي Gradient Checkpointing بتشبيه بسيط، ثم اربطه بهذا المثال: تدريب نموذج أطول سياقاً على GPU محدود.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تدريب نموذج أطول سياق على GPU محدود.",
+    "tuned_summary": "التشبيه يسهّل البداية، ثم نرجع إلى التعريف التقني عند التطبيق."
+  },
+  {
+    "id": "53",
+    "question": "في المثال التالي: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. أين تظهر فكرة Data Leakage؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "tuned_summary": "المثال يوضح الفكرة، لكن النتيجة الفعلية تحتاج قياساً."
+  },
+  {
+    "id": "54",
+    "question": "قال زميلي إن In-Context Learning لا يحتاج قياساً أو تحققاً، مع أن ينتهي بانتهاء السياق ويتأثر باختيار الأمثلة. كيف أصحح كلامه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "وضع قائمة من الأسئلة المشتركة لتفسح حوار مستندات موثوقة.",
+    "tuned_summary": "صحح الفكرة بالاعتماد على تجربة مضبوطة ومقياس مناسب."
+  },
+  {
+    "id": "55",
+    "question": "في المثال التالي: مقياس إجمالي المبيعات يتغير مع مرشح السنة. أين تظهر فكرة DAX Measure؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "tuned_summary": "المثال يوضح الفكرة، لكن النتيجة الفعلية تحتاج قياساً."
+  },
+  {
+    "id": "56",
+    "question": "في المثال التالي: استهداف q_proj وv_proj لتجربة خفيفة. أين تظهر فكرة LoRA Target Modules؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة.",
+    "tuned_summary": "المثال يوضح الفكرة، لكن النتيجة الفعلية تحتاج قياساً."
+  },
+  {
+    "id": "57",
+    "question": "لدي هذا السيناريو: ترميز جملة قبل تصنيفها. كيف أقرر إن كان Transformer Encoder جزءاً مناسباً من الحل؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "ترميز جملة قبل تصنيفها.",
+    "tuned_summary": "جرّب نطاقاً صغيراً، وقِس النتيجة قبل توسيع المشروع."
+  },
+  {
+    "id": "58",
+    "question": "طبقت LoRA Target Modules في حالة: استهداف q_proj وv_proj لتجربة خفيفة. ولم تتحسن النتيجة. كيف أشخص السبب؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "في حالة مثل: استهداف q_proj وv_proj لتجربة خفيفة. راجع عينة من الأخطاء بدلاً من الاكتفاء برقم واحد.",
+    "tuned_summary": "غيّر عاملاً واحداً في كل تجربة وسجّل النتيجة لتعرف سبب التحسن أو التراجع."
+  },
+  {
+    "id": "59",
+    "question": "إذا استخدمت DAX Measure في حالة: مقياس إجمالي المبيعات يتغير مع مرشح السنة. فما الذي يجوز استنتاجه وما الذي لا يجوز؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة. تذكر أيضاً أن أي قياس يحتاج بيانات مستقرة ومقياساً مناسباً.",
+    "tuned_summary": "اذكر النتيجة وحدودها وما يحتاج إلى تحقق إضافي."
+  },
+  {
+    "id": "60",
+    "question": "لتنفيذ حالة مثل: عرض مثالين للتنسيق ثم طلب جواب ثالث. ما المدخلات التي يحتاجها In-Context Learning؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "عرض مثالين للتنسيق ثم طلب جواب ثالث. تحقق من الجودة والتغطية؛ لا يضمن الهدف أو القبول بالضرورة.",
+    "tuned_summary": "جودة المدخلات وطريقة جمعها جزء من الحل."
+  },
+  {
+    "id": "61",
+    "question": "قبل بناء قرار يتأثر بـ DAX Measure في سياق تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص، ما الافتراضات والحدود التي أوثقها؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حتى في مثال مثل: حساب المبيعات لكل عملة كل شهر. اختبر الحالات غير المعتادة وراقب الفشل.",
+    "tuned_summary": "تعامل مع DAX Measure بتحقق مستقل، ووثّق ما يعنيه وما لا يثبته."
+  },
+  {
+    "id": "62",
+    "question": "لتنفيذ حالة مثل: ترميز جملة قبل تصنيفها. ما المدخلات التي يحتاجها Transformer Encoder؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "ترميز جملة قبل تصنيفها. تحقق من الجودة والتغطية؛ لا يكفي النموذج نفسه لتحديد جودة النموذج.",
+    "tuned_summary": "جودة المدخلات وطريقة جمعها جزء من الحل."
+  },
+  {
+    "id": "63",
+    "question": "قال زميلي إن Unsupervised Learning لا يحتاج قياساً أو تحققاً، مع أن المجموعة المكتشفة ليست حقيقة موضوعية وتحتاج تفسيراً. كيف أصحح كلامه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تحديد فئة كل بطاقة من خلال خوارزمية تقسيم.",
+    "tuned_summary": "صحح الفكرة بالاعتماد على تجربة مضبوطة ومقياس مناسب."
+  },
+  {
+    "id": "64",
+    "question": "في مشروع هدفه تخصيص سلوك نموذج مدرب مسبقاً بكفاءة، كيف أختار بين LoRA Target Modules وLoRA Rank؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تحديث معاملات LayerNorm عبر LoRAs. وقارن النتيجة ببديل يستخدم LoRA Target Modules.",
+    "tuned_summary": "اختر بناءً على هدف المسألة، لا على شهرة المصطلح."
+  },
+  {
+    "id": "65",
+    "question": "مبتدئ تعامل مع LoRA Target Modules وتجاهل أن استهداف طبقات أكثر يرفع السعة والذاكرة وقد يفرط في الملاءمة. ما الخطأ في طريقته؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استخدام رمز من شبكة محلية كمولد موزع.",
+    "tuned_summary": "راجع البيانات وخط الأساس وحالات الخطأ قبل تغيير التقنية."
+  },
+  {
+    "id": "66",
+    "question": "لتنفيذ حالة مثل: استهداف q_proj وv_proj لتجربة خفيفة. ما المدخلات التي يحتاجها LoRA Target Modules؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة. تحقق من الجودة والتغطية؛ لا يكفي اسم فئة أو رقم خطيب.",
+    "tuned_summary": "جودة المدخلات وطريقة جمعها جزء من الحل."
+  },
+  {
+    "id": "67",
+    "question": "لتنفيذ حالة مثل: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. ما المدخلات التي يحتاجها Data Leakage؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. تحقق من الجودة والتغطية؛ قد تضيف صلة لا توجد أو تستهدف خطياً.",
+    "tuned_summary": "جودة المدخلات وطريقة جمعها جزء من الحل."
+  },
+  {
+    "id": "68",
+    "question": "اشرح Gradient Checkpointing لمبتدئ يريد تمثيل علاقات معقدة بواسطة شبكات عصبية.",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "تحميل حزمة صغيرة من وزن ومعامل ثم استخدام gradient of the rest.",
+    "tuned_summary": "Gradient Checkpointing مفهوم له معنى محدد ولا يكفي اسمه للحكم على جودة الحل."
+  },
+  {
+    "id": "69",
+    "question": "متى يصبح Unsupervised Learning مهماً في حالة مثل: تجميع العملاء بحسب سلوك الشراء. وكيف أتعامل معه؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء.",
+    "tuned_summary": "حدّد الهدف والقيود ثم قارن بخط أساس أبسط."
+  },
+  {
+    "id": "70",
+    "question": "مبتدئ تعامل مع Unsupervised Learning وتجاهل أن المجموعة المكتشفة ليست حقيقة موضوعية وتحتاج تفسيراً. ما الخطأ في طريقته؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استنتاج فئة من الأفكار بناءً على سلوكها داخل قاعدة بيانات مستقرة.",
+    "tuned_summary": "راجع البيانات وخط الأساس وحالات الخطأ قبل تغيير التقنية."
+  },
+  {
+    "id": "71",
+    "question": "اشرح In-Context Learning لمبتدئ يريد استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة.",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "استرجاع قائمة من المقالات ذات الصلة بالسؤال.",
+    "tuned_summary": "In-Context Learning مفهوم له معنى محدد ولا يكفي اسمه للحكم على جودة الحل."
+  },
+  {
+    "id": "72",
+    "question": "مبتدئ تعامل مع Arabic NLP وتجاهل أن التطبيع الزائد قد يمحو فروقاً مفيدة. ما الخطأ في طريقته؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استخراج اسم من بحث عادي.",
+    "tuned_summary": "راجع البيانات وخط الأساس وحالات الخطأ قبل تغيير التقنية."
+  },
+  {
+    "id": "73",
+    "question": "رتب خطوات لفحص أو تطبيق LoRA Target Modules ثم تقييم حالة: استهداف q_proj وv_proj لتجربة خفيفة.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة.",
+    "tuned_summary": "لا توسع الحل قبل نجاح الاختبار المحدود."
+  },
+  {
+    "id": "74",
+    "question": "عند دراسة أثر Gradient Checkpointing على تمثيل علاقات معقدة بواسطة شبكات عصبية، كيف أقيس النتيجة بمقارنة عادلة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تحميل فحوى check-pointing وتتبع الأخطاء.",
+    "tuned_summary": "اجمع القياس الكمي مع مراجعة عينات الأخطاء."
+  },
+  {
+    "id": "75",
+    "question": "في مشروع هدفه بناء نظام ذكي مسؤول يمكن قياسه ومراجعته، كيف أختار بين Data Leakage وOverfitting؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "حساب التكلفة مع وجود خاصيات لم تدخل في البيانات الرسمية. وقارن النتيجة ببديل يستخدم Overfitting.",
+    "tuned_summary": "اختر بناءً على هدف المسألة، لا على شهرة المصطلح."
+  },
+  {
+    "id": "76",
+    "question": "في المثال التالي: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. أين تظهر فكرة Arabic NLP؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة.",
+    "tuned_summary": "المثال يوضح الفكرة، لكن النتيجة الفعلية تحتاج قياساً."
+  },
+  {
+    "id": "77",
+    "question": "قرّب لي LoRA Target Modules بتشبيه بسيط، ثم اربطه بهذا المثال: استهداف q_proj وv_proj لتجربة خفيفة.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة.",
+    "tuned_summary": "التشبيه يسهّل البداية، ثم نرجع إلى التعريف التقني عند التطبيق."
+  },
+  {
+    "id": "78",
+    "question": "قال زميلي إن Arabic NLP لا يحتاج قياساً أو تحققاً، مع أن التطبيع الزائد قد يمحو فروقاً مفيدة. كيف أصحح كلامه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تفسير كلمة مثل «الإجابة» في سياق مرادفتها.",
+    "tuned_summary": "صحح الفكرة بالاعتماد على تجربة مضبوطة ومقياس مناسب."
+  },
+  {
+    "id": "79",
+    "question": "أحاول استرجاع دليل خارجي ذي صلة قبل التوليد. ما دور Reranking في فهم هذا العمل أو تنفيذه؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "ربط نتيجة جواب معطى من الأسئلة ضمن قائمة علاقاتها.",
+    "tuned_summary": "تعامل مع Reranking وفق هدف المشكلة والبيانات والقياس المتاح."
+  },
+  {
+    "id": "80",
+    "question": "أحاول تخصيص سلوك نموذج مدرب مسبقاً بكفاءة. ما دور LoRA Target Modules في فهم هذا العمل أو تنفيذه؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "ربط adapter مع optimizer وweight update.",
+    "tuned_summary": "تعامل مع LoRA Target Modules وفق هدف المشكلة والبيانات والقياس المتاح."
+  },
+  {
+    "id": "81",
+    "question": "نشرت حلاً يستخدم Unsupervised Learning في حالة: تجميع العملاء بحسب سلوك الشراء. ما إشارات التراجع أو سوء الاستخدام التي أراقبها؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء.",
+    "tuned_summary": "ضع حدوداً وتنبيهات ومراجعة بشرية للحالات عالية الأثر."
+  },
+  {
+    "id": "82",
+    "question": "أحاول تمثيل علاقات معقدة بواسطة شبكات عصبية. ما دور Gradient Checkpointing في فهم هذا العمل أو تنفيذه؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "تحميل السياق والرموز ثم ربط كل حالة ب问询 من المستخدم.",
+    "tuned_summary": "تعامل مع Gradient Checkpointing وفق هدف المشكلة والبيانات والقياس المتاح."
+  },
+  {
+    "id": "83",
+    "question": "أحتاج شرحاً في دقيقة عن Gradient Checkpointing يذكر دوره في تمثيل علاقات معقدة بواسطة شبكات عصبية وحداً مهماً.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تحميل حزمة ضخمة ثم استخدام check point كل مرة تضيف حالة.",
+    "tuned_summary": "تعريف واحد ومثال وحدّ واحد أفضل من قائمة مصطلحات بلا معنى."
+  },
+  {
+    "id": "84",
+    "question": "قد يفشل Gradient Checkpointing لأن يوفر الذاكرة مقابل وقت حساب إضافي. كيف أكتشف ذلك وأتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تثبيت التسلسل عند استخراج كل صفحة من قائمة الرموز.",
+    "tuned_summary": "اكتشف الفشل بعينة أخطاء، ثم أصلح السبب أو استخدم بديلاً أبسط."
+  },
+  {
+    "id": "85",
+    "question": "متى يصبح Gradient Checkpointing مهماً في حالة مثل: تدريب نموذج أطول سياقاً على GPU محدود. وكيف أتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تدريب نموذج أطول سياق على GPU محدود.",
+    "tuned_summary": "حدّد الهدف والقيود ثم قارن بخط أساس أبسط."
+  },
+  {
+    "id": "86",
+    "question": "رتب خطوات لفحص أو تطبيق Gradient Checkpointing ثم تقييم حالة: تدريب نموذج أطول سياقاً على GPU محدود.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تدريب نموذج أطول سياكاً على GPU محدود.",
+    "tuned_summary": "لا توسع الحل قبل نجاح الاختبار المحدود."
+  },
+  {
+    "id": "87",
+    "question": "رتب خطوات لفحص أو تطبيق Reranking ثم تقييم حالة: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "tuned_summary": "لا توسع الحل قبل نجاح الاختبار المحدود."
+  },
+  {
+    "id": "88",
+    "question": "رتب خطوات لفحص أو تطبيق Data Leakage ثم تقييم حالة: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "tuned_summary": "لا توسع الحل قبل نجاح الاختبار الملموس."
+  },
+  {
+    "id": "89",
+    "question": "إذا استخدمت Transformer Encoder في حالة: ترميز جملة قبل تصنيفها. فما الذي يجوز استنتاجه وما الذي لا يجوز؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "ترميز جملة قبل تصنيفها. تذكر أيضاً أن التحديج قد ينتج أخطاءاً وتكرراً واعتماداً على سلوك المستخدم.",
+    "tuned_summary": "اذكر النتيجة وحدودها وما يحتاج إلى تحقق إضافي."
+  },
+  {
+    "id": "90",
+    "question": "في المثال التالي: تدريب نموذج أطول سياقاً على GPU محدود. أين تظهر فكرة Gradient Checkpointing؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تدريب نموذج أطول سياق على GPU محدود.",
+    "tuned_summary": "المثال يوضح الفكرة، لكن النتيجة الفعلية تحتاج قياساً."
+  },
+  {
+    "id": "91",
+    "question": "أحاول استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة. ما دور In-Context Learning في فهم هذا العمل أو تنفيذه؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "إدخال سؤال خارجي ضمن قيود البناء لتفسيره.",
+    "tuned_summary": "تعامل مع In-Context Learning بفهم أدق قبل تفعيله في مشروع مستمر."
+  },
+  {
+    "id": "92",
+    "question": "قرّب لي Data Leakage بتشبيه بسيط، ثم اربطه بهذا المثال: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "tuned_summary": "التشبيه يسهّل البداية، ثم نرجع إلى التعريف التقني عند التطبيق."
+  },
+  {
+    "id": "93",
+    "question": "أريد فحص Gradient Checkpointing في هذا المثال: تدريب نموذج أطول سياقاً على GPU محدود. ما أول خطوة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تدريب نموذج أطول سياقَ على GPU محدود.",
+    "tuned_summary": "التجربة المحدودة تكشف مبكراً إن كانت الفكرة مناسبة."
+  },
+  {
+    "id": "94",
+    "question": "قال زميلي إن Transformer Encoder لا يحتاج قياساً أو تحققاً، مع أن ليس مولداً ذاتياً افتراضياً من دون رأس أو decoder مناسب. كيف أصحح كلامه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استرجاع اسم فريق بعد عملية ترتيب تغير التسلسل.",
+    "tuned_summary": "صحح الفكرة بالاعتماد على تجربة مضبوطة ومقياس مناسب."
+  },
+  {
+    "id": "95",
+    "question": "قال زميلي إن DAX Measure لا يحتاج قياساً أو تحققاً، مع أن Measure ليست قيمة مخزنة لكل صف مثل calculated column. كيف أصحح كلامه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "متوسطة أسهم كل شهر.",
+    "tuned_summary": "صحح الفكرة بالاعتماد على تجربة مضبوطة ومقياس مناسب."
+  },
+  {
+    "id": "96",
+    "question": "في المثال التالي: عرض مثالين للتنسيق ثم طلب جواب ثالث. أين تظهر فكرة In-Context Learning؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "عرض مثالين للتنسيق ثم طلب جواب ثالث.",
+    "tuned_summary": "المثال يوضح الفكرة، لكن النتيجة الفعلية تحتاج قياساً."
+  },
+  {
+    "id": "97",
+    "question": "قد يفشل In-Context Learning لأن ينتهي بانتهاء السياق ويتأثر باختيار الأمثلة. كيف أكتشف ذلك وأتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استخراج سؤالات FAQ من فقرة اللغة العربية.",
+    "tuned_summary": "اكتشف الفشل بعينة أخطاء، ثم أصلح السبب أو استخدم بديلاً أبسط."
+  },
+  {
+    "id": "98",
+    "question": "لدي هذا السيناريو: تجميع العملاء بحسب سلوك الشراء. كيف أقرر إن كان Unsupervised Learning جزءاً مناسباً من الحل؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء.",
+    "tuned_summary": "جرّب نطاقاً صغيراً، وقِس النتيجة قبل توسيع المشروع."
+  },
+  {
+    "id": "99",
+    "question": "لدي هذا السيناريو: مقياس إجمالي المبيعات يتغير مع مرشح السنة. كيف أقرر إن كان DAX Measure جزءاً مناسباً من الحل؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "tuned_summary": "جرّب نطاقاً صغيراً، وقِس النتيجة قبل توسيع المشروع."
+  },
+  {
+    "id": "100",
+    "question": "سمعت مصطلح LoRA Target Modules في حالة مثل: استهداف q_proj وv_proj لتجربة خفيفة. ما معناه ببساطة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة.",
+    "tuned_summary": "افهم وظيفة LoRA قبل استخدامه في مشروع قياس يمريره على بيانات مستخدمين."
+  },
+  {
+    "id": "101",
+    "question": "أحتاج شرحاً في دقيقة عن LoRA Target Modules يذكر دوره في تخصيص سلوك نموذج مدرب مسبقاً بكفاءة وحداً مهماً.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "ربط module مع weight scale ولا تغيّر الحالة.",
+    "tuned_summary": "تعريف واحد ومثال وحدّ واحد أفضل من قائمة مصطلحات بلا معنى."
+  },
+  {
+    "id": "102",
+    "question": "في مشروع هدفه تمثيل علاقات معقدة بواسطة شبكات عصبية، كيف أختار بين Gradient Checkpointing وGradient Accumulation؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استخدام check-pointing لحفظ trạng التدرجات عند كل خطوة تالية.",
+    "tuned_summary": "اختر بناءً على هدف المسألة، لا على شهرة المصطلح."
+  },
+  {
+    "id": "103",
+    "question": "أريد فحص LoRA Target Modules في هذا المثال: استهداف q_proj وv_proj لتجربة خفيفة. ما أول خطوة؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استهداف q_proj وv_proj لتجربة خفيفة.",
+    "tuned_summary": "التجربة المحدودة تكشف مبكراً إن كانت الفكرة مناسبة."
+  },
+  {
+    "id": "104",
+    "question": "نشرت حلاً يستخدم DAX Measure في حالة: مقياس إجمالي المبيعات يتغير مع مرشح السنة. ما إشارات التراجع أو سوء الاستخدام التي أراقبها؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "tuned_summary": "ضع حدوداً وتنبيهات ومراجعة بشرية للحالات عالية الأثر."
+  },
+  {
+    "id": "105",
+    "question": "سمعت مصطلح Gradient Checkpointing في حالة مثل: تدريب نموذج أطول سياقاً على GPU محدود. ما معناه ببساطة؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "تدريب نموذج أطول سياقَ على GPU محدود.",
+    "tuned_summary": "افهم وظيفة Gradient Checkpointing أولاً، ثم اختبره على بيانات مناسبة."
+  },
+  {
+    "id": "106",
+    "question": "في المثال التالي: ترميز جملة قبل تصنيفها. أين تظهر فكرة Transformer Encoder؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "ترميز جملة قبل تصنيفها.",
+    "tuned_summary": "المثال يوضح الفكرة، لكن النتيجة الفعلية تحتاج قياساً."
+  },
+  {
+    "id": "107",
+    "question": "في مشروع هدفه تعلم نمط قابل للتعميم من البيانات، كيف أختار بين Unsupervised Learning وSupervised Learning؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استرجاع مشتريات عميلة حسب إجراءاتها. وقارن النتيجة ببديل يستخدم Supervised Learning.",
+    "tuned_summary": "اختر بناءً على هدف المسألة، لا على شهرة المصطلح."
+  },
+  {
+    "id": "108",
+    "question": "اشرح Unsupervised Learning لمبتدئ يريد تعلم نمط قابل للتعميم من البيانات.",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "استرجاع مشتريات حساسات من سلسلة بيانات العملاء.",
+    "tuned_summary": "Unsupervised Learning مفهوم له معنى محدد ولا يكفي اسمه للحكم على جودة الحل."
+  },
+  {
+    "id": "109",
+    "question": "أريد فحص Reranking في هذا المثال: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. ما أول خطوة؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "tuned_summary": "التجربة المحدودة تكشف مبكراً إن كانت الفكرة مناسبة."
+  },
+  {
+    "id": "110",
+    "question": "أريد فحص DAX Measure في هذا المثال: مقياس إجمالي المبيعات يتغير مع مرشح السنة. ما أول خطوة؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "tuned_summary": "التجربة المحدودة تكشف مبكراً إن كانت الفكرة مناسبة."
+  },
+  {
+    "id": "111",
+    "question": "طبقت DAX Measure في حالة: مقياس إجمالي المبيعات يتغير مع مرشح السنة. ولم تتحسن النتيجة. كيف أشخص السبب؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "في حالة مثل: مقياس إجمالي المبيعات يتغير مع مرشح السنة. راجع عينة من الأخطاء بدلاً من الاكتفاء برقم واحد.",
+    "tuned_summary": "غيّر عاملاً واحداً في كل تجربة وسجّل النتيجة لتعرف سبب التحسن أو التراجع."
+  },
+  {
+    "id": "112",
+    "question": "قبل بناء قرار يتأثر بـ Arabic NLP في سياق معالجة اللغة وتقييم مخرجاتها في سياق واضح، ما الافتراضات والحدود التي أوثقها؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حتى في مثال مثل: ربط الرمز بالحالة والأفعال والسياق. اختبر الحالات غير المعتادة وراقب الخطأ.",
+    "tuned_summary": "تعامل مع Arabic NLP بتحقق مستقل، ووثّق ما يعنيه وما لا يثبته."
+  },
+  {
+    "id": "113",
+    "question": "قبل بناء قرار يتأثر بـ Gradient Checkpointing في سياق تمثيل علاقات معقدة بواسطة شبكات عصبية، ما الافتراضات والحدود التي أوثقها؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حتى في مثال مثل: ربط حالة معامل بالحالة غير الرسمية. اختبر الحالات غير المعتادة وراقب الفشل.",
+    "tuned_summary": "تعامل مع Gradient Checkpointing بتحقق مستقل، ووثّق ما يعنيه وما لا يثبته."
+  },
+  {
+    "id": "114",
+    "question": "أريد فحص Arabic NLP في هذا المثال: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. ما أول خطوة؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة.",
+    "tuned_summary": "التجربة المحدودة تكشف مبكراً إن كانت الفكرة مناسبة."
+  },
+  {
+    "id": "115",
+    "question": "في مشروع هدفه ربط عناصر التسلسل بالسياق المناسب، كيف أختار بين Transformer Encoder وDecoder؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "توليد سؤال جديد بناءً على الرموز. وقارن النتيجة ببديل يستخدم Encoder فقط.",
+    "tuned_summary": "اختر بناءً على هدف المسألة، لا على شهرة المصطلح."
+  },
+  {
+    "id": "116",
+    "question": "مبتدئ تعامل مع Data Leakage وتجاهل أن قد يعطي أرقاماً ممتازة تنهار في الواقع. ما الخطأ في طريقته؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "ربط حساب بطاقة مع بيانات من مصدر مختلف.",
+    "tuned_summary": "راجع البيانات وخط الأساس وحالات الخطأ قبل تغيير التقنية."
+  },
+  {
+    "id": "117",
+    "question": "قد يفشل Arabic NLP لأن التطبيع الزائد قد يمحو فروقاً مفيدة. كيف أكتشف ذلك وأتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تجميع صفحات blog بواسطة كلمة رمز.",
+    "tuned_summary": "اكتشف الفشل بعينة أخطاء، ثم أصلح السبب أو استخدم بديلاً أبسط."
+  },
+  {
+    "id": "118",
+    "question": "أحاول تعلم نمط قابل للتعميم من البيانات. ما دور Unsupervised Learning في فهم هذا العمل أو تنفيذه؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "تحديد فئات وظيفية من خلال كластينغ.",
+    "tuned_summary": "تعامل مع Unsupervised Learning وفق هدف المشكلة والبيانات والقياس المتاح."
+  },
+  {
+    "id": "119",
+    "question": "أحاول تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص. ما دور DAX Measure في فهم هذا العمل أو تنفيذه؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حساب المبيعات لكل عملاء كل شهر.",
+    "tuned_summary": "تعامل مع DAX Measure وفق هدف المشكلة والبيانات والقياس المتاح."
+  },
+  {
+    "id": "120",
+    "question": "سمعت مصطلح In-Context Learning في حالة مثل: عرض مثالين للتنسيق ثم طلب جواب ثالث. ما معناه ببساطة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "عرض مثالين للتنسيق ثم طلب جواب ثالث.",
+    "tuned_summary": "افهم وظيفة In-Context Learning أولاً، ثم اختبره على بيانات مناسبة."
+  },
+  {
+    "id": "121",
+    "question": "في مشروع هدفه استرجاع دليل خارجي ذي صلة قبل التوليد، كيف أختار بين Reranking وRetrieval؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "البحث عن الدعم الفني ثم ترتيب النتائج حسب الأثر. وقارن النتيجة ببديل يستخدم Retrival.",
+    "tuned_summary": "اختر بناءً على هدف المسألة، لا على شهرة المصطلح."
+  },
+  {
+    "id": "122",
+    "question": "أحتاج شرحاً في دقيقة عن In-Context Learning يذكر دوره في استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة وحداً مهماً.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استرجاع سؤال من قائمة قديمة بواسطة نفس النموذج.",
+    "tuned_summary": "تعريف واحد ومثال وحدّ واحد أفضل من قائمة مصطلحات بلا معنى."
+  },
+  {
+    "id": "123",
+    "question": "نشرت حلاً يستخدم Gradient Checkpointing في حالة: تدريب نموذج أطول سياقاً على GPU محدود. ما إشارات التراجع أو سوء الاستخدام التي أراقبها؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تدريب نموذج أطول سياكاً على GPU محدود.",
+    "tuned_summary": "ضع حدوداً وتنبيهات ومراجعة بشرية للحالات عالية الأثر."
+  },
+  {
+    "id": "124",
+    "question": "إذا استخدمت In-Context Learning في حالة: عرض مثالين للتنسيق ثم طلب جواب ثالث. فما الذي يجوز استنتاجه وما الذي لا يجوز؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "عرض مثالين للتنسيق ثم طلب جواب ثالث. تذكر أيضاً أن الاسترجاع القصير قد يعاني من التحيز وحاجزات التقنية.",
+    "tuned_summary": "اذكر النتيجة وحدودها وما يحتاج إلى تحقق إضافي."
+  },
+  {
+    "id": "125",
+    "question": "سمعت مصطلح Transformer Encoder في حالة مثل: ترميز جملة قبل تصنيفها. ما معناه ببساطة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "ترميز جملة قبل تصنيفها.",
+    "tuned_summary": "افهم وظيفة Transformer Encoder أولاً، ثم اختبره على بيانات مناسبة."
+  },
+  {
+    "id": "126",
+    "question": "قد يفشل Reranking لأن يزيد الزمن والتكلفة وقد يعيد ترتيباً خاطئاً. كيف أكتشف ذلك وأتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "إرجاء نتيجة search ranking إلى خطوة بعد لقطة قياس.",
+    "tuned_summary": "اكتشف الفشل بعينة أخطاء، ثم أصلح السبب أو استخدم بديلاً أبسط."
+  },
+  {
+    "id": "127",
+    "question": "قال زميلي إن Gradient Checkpointing لا يحتاج قياساً أو تحققاً، مع أن يوفر الذاكرة مقابل وقت حساب إضافي. كيف أصحح كلامه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تحميل ضبط كاملة لتحسين الاستقرار عند استخدام خطوات طويلة.",
+    "tuned_summary": "صحح الفكرة بالاعتماد على تجربة مضبوطة ومقياس مناسب."
+  },
+  {
+    "id": "128",
+    "question": "قرّب لي In-Context Learning بتشبيه بسيط، ثم اربطه بهذا المثال: عرض مثالين للتنسيق ثم طلب جواب ثالث.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "عرض مثالين للتنسيق ثم طلب جواب ثالث.",
+    "tuned_summary": "التشبيه يسهّل البداية، ثم نرجع إلى التعريف التقني عند التطبيق."
+  },
+  {
+    "id": "129",
+    "question": "قد يفشل Transformer Encoder لأن ليس مولداً ذاتياً افتراضياً من دون رأس أو decoder مناسب. كيف أكتشف ذلك وأتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تعلم أنواع مختلفة من الأدب بالرقم والتنبيه.",
+    "tuned_summary": "اكتشف الفشل بعينة أخطاء، ثم أصلح السبب أو استخدم بديلاً أبسط."
+  },
+  {
+    "id": "130",
+    "question": "في المثال التالي: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. أين تظهر فكرة Reranking؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "tuned_summary": "المثال يوضح الفكرة، لكن النتيجة الفعلية تحتاج قياساً."
+  },
+  {
+    "id": "131",
+    "question": "عند دراسة أثر DAX Measure على تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص، كيف أقيس النتيجة بمقارنة عادلة؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "مراجعة المبيعات بعد إدخال تحديث.",
+    "tuned_summary": "اجمع القياس الكمي مع معايير عربية واضحة للحكم على النجاح."
+  },
+  {
+    "id": "132",
+    "question": "أريد فحص In-Context Learning في هذا المثال: عرض مثالين للتنسيق ثم طلب جواب ثالث. ما أول خطوة؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "عرض مثالين للتنسيق ثم طلب جواب ثالث.",
+    "tuned_summary": "التجربة المحدودة تكشف مبكراً إن كانت الفكرة مناسبة."
+  },
+  {
+    "id": "133",
+    "question": "قرّب لي DAX Measure بتشبيه بسيط، ثم اربطه بهذا المثال: مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "مقياس إجمالي المبيعات يتغير مع مرشح السنة.",
+    "tuned_summary": "التشبيه يسهّل البداية، ثم نرجع إلى التعريف التقني عند التطبيق."
+  },
+  {
+    "id": "134",
+    "question": "قبل بناء قرار يتأثر بـ Reranking في سياق استرجاع دليل خارجي ذي صلة قبل التوليد، ما الافتراضات والحدود التي أوثقها؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "حتى في مقارنة عينة من الأسئلة بالترتيب الأساسي. اختبر الحالات غير المعتادة وراقب الفشل.",
+    "tuned_summary": "تعامل مع Re-ranking بتحقق مستقل، ووثّق ما يعنيه وما لا يثبته."
+  },
+  {
+    "id": "135",
+    "question": "مبتدئ تعامل مع In-Context Learning وتجاهل أن ينتهي بانتهاء السياق ويتأثر باختيار الأمثلة. ما الخطأ في طريقته؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "طلب إيجاد قائمة من الأفكار ذات الصلة بالسؤال.",
+    "tuned_summary": "راجع البيانات وخط الأساس وحالات الخطأ قبل تغيير التقنية."
+  },
+  {
+    "id": "136",
+    "question": "متى يصبح Reranking مهماً في حالة مثل: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. وكيف أتعامل معه؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "tuned_summary": "حدّد الهدف والقيود ثم قارن بخط أساس أبسط."
+  },
+  {
+    "id": "137",
+    "question": "متى يصبح In-Context Learning مهماً في حالة مثل: عرض مثالين للتنسيق ثم طلب جواب ثالث. وكيف أتعامل معه؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "عرض مثالين للتنسيق ثم طلب جواب ثالث.",
+    "tuned_summary": "حدّد الهدف والقيود ثم قارن بخط أساس أبسط."
+  },
+  {
+    "id": "138",
+    "question": "أحتاج شرحاً في دقيقة عن Transformer Encoder يذكر دوره في ربط عناصر التسلسل بالسياق المناسب وحداً مهماً.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "معاملات transformer encoder لتحليل نصوص محليات.",
+    "tuned_summary": "تعريف واحد ومثال وحدّ واحد أفضل من قائمة مصطلحات بلا معنى."
+  },
+  {
+    "id": "139",
+    "question": "قال زميلي إن LoRA Target Modules لا يحتاج قياساً أو تحققاً، مع أن استهداف طبقات أكثر يرفع السعة والذاكرة وقد يفرط في الملاءمة. كيف أصحح كلامه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "ربط module 2 من layer 3 بmodule 1.",
+    "tuned_summary": "صحح الفكرة بالاعتماد على تجربة مضبوطة ومقياس مناسب."
+  },
+  {
+    "id": "140",
+    "question": "رتب خطوات لفحص أو تطبيق In-Context Learning ثم تقييم حالة: عرض مثالين للتنسيق ثم طلب جواب ثالث.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "عرض مثالين للتنسيق ثم طلب جواب ثالث.",
+    "tuned_summary": "لا توسع الحل قبل نجاح الاختبار المحدود."
+  },
+  {
+    "id": "141",
+    "question": "قال زميلي إن Reranking لا يحتاج قياساً أو تحققاً، مع أن يزيد الزمن والتكلفة وقد يعيد ترتيباً خاطئاً. كيف أصحح كلامه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استرجاع صفحات من نتيجة search قبل عرضها.",
+    "tuned_summary": "صحح الفكرة بالاعتماد على تجربة مضبوطة ومقياس مناسب."
+  },
+  {
+    "id": "142",
+    "question": "متى يصبح Data Leakage مهماً في حالة مثل: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. وكيف أتعامل معه؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "tuned_summary": "حدّد الهدف والقيود ثم قارن بخط أساس أبسط."
+  },
+  {
+    "id": "143",
+    "question": "سمعت مصطلح Arabic NLP في حالة مثل: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. ما معناه ببساطة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة.",
+    "tuned_summary": "افهم وظيفة Arabic NLP أولاً، ثم اختبره على بيانات مناسبة."
+  },
+  {
+    "id": "144",
+    "question": "نشرت حلاً يستخدم In-Context Learning في حالة: عرض مثالين للتنسيق ثم طلب جواب ثالث. ما إشارات التراجع أو سوء الاستخدام التي أراقبها؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "عرض مثالين للتنسيق ثم طلب جواب ثالث.",
+    "tuned_summary": "ضع حدوداً وتنبيهات ومراجعة بشرية للحالات عالية الأثر."
+  },
+  {
+    "id": "145",
+    "question": "أريد فحص Data Leakage في هذا المثال: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. ما أول خطوة؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "tuned_summary": "التجربة المحدودة تكشف مبكراً إن كانت الفكرة مناسبة."
+  },
+  {
+    "id": "146",
+    "question": "اشرح Reranking لمبتدئ يريد استرجاع دليل خارجي ذي صلة قبل التوليد.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "استرجاع دليل خارجي ذي صلة قبل التوليد.",
+    "tuned_summary": "Reranking مفهوم له معنى محدد ولا يكفي اسمه للحكم على جودة الحل."
+  },
+  {
+    "id": "147",
+    "question": "مبتدئ تعامل مع Reranking وتجاهل أن يزيد الزمن والتكلفة وقد يعيد ترتيباً خاطئاً. ما الخطأ في طريقته؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "ربط نتيجة scan بالتصنيف الأعلى عند اختيار الخيار.",
+    "tuned_summary": "راجع البيانات وخط الأساس وحالات الخطأ قبل تغيير التقنية."
+  },
+  {
+    "id": "148",
+    "question": "أحتاج شرحاً في دقيقة عن Arabic NLP يذكر دوره في معالجة اللغة وتقييم مخرجاتها في سياق واضح وحداً مهماً.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تحويل تدوين فارسي إلى موسوعة باللغة الفارسية.",
+    "tuned_summary": "تعريف واحد ومثال وحدّ واحد أفضل من قائمة مصطلحات بلا معنى."
+  },
+  {
+    "id": "149",
+    "question": "نشرت حلاً يستخدم Arabic NLP في حالة: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. ما إشارات التراجع أو سوء الاستخدام التي أراقبها؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "توحيد بعض أشكال الألف before فهرسة بحثية مدروسة.",
+    "tuned_summary": "ضع حدوداً وتنبيهات ومراجعة بشرية للحالات عالية الأثر."
+  },
+  {
+    "id": "150",
+    "question": "لتنفيذ حالة مثل: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. ما المدخلات التي يحتاجها Reranking؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. تحقق من الجودة والتغطية؛ قد لا تستطيع استعادة المعنى عند استخدام أوزان عالية أو بيانات غير متناثمة.",
+    "tuned_summary": "جودة المدخلات وطريقة جمعها جزء من الحل."
+  },
+  {
+    "id": "151",
+    "question": "طبقت Data Leakage في حالة: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. ولم تتحسن النتيجة. كيف أشخص السبب؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "في حالة مثل: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. راجع عينة من الأخطاء بدلاً من الاكتفاء برقم واحد.",
+    "tuned_summary": "غيّر عاملاً واحداً في كل تجربة وسجّل النتيجة لتعرف سبب التحسن أو التراجع."
+  },
+  {
+    "id": "152",
+    "question": "لدي هذا السيناريو: عرض مثالين للتنسيق ثم طلب جواب ثالث. كيف أقرر إن كان In-Context Learning جزءاً مناسباً من الحل؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "عرض مثالين ثم طلب جواب ثالث.",
+    "tuned_summary": "جرّب نطاقاً صغيراً، وقِس النتيجة قبل توسيع المشروع."
+  },
+  {
+    "id": "153",
+    "question": "عند دراسة أثر Arabic NLP على معالجة اللغة وتقييم مخرجاتها في سياق واضح، كيف أقيس النتيجة بمقارنة عادلة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "قياس فهم جملة مدروسة بواسطة اختبار خارجي.",
+    "tuned_summary": "اجمع القياس الكمي مع مراجعة عينات الأخطاء."
+  },
+  {
+    "id": "154",
+    "question": "اشرح DAX Measure لمبتدئ يريد تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص.",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "رصد المبيعات لكل عملاء.",
+    "tuned_summary": "DAX Measure مفهوم له معنى محدد ولا يكفي اسمه للحكم على جودة الحل."
+  },
+  {
+    "id": "155",
+    "question": "إذا استخدمت Gradient Checkpointing في حالة: تدريب نموذج أطول سياقاً على GPU محدود. فما الذي يجوز استنتاجه وما الذي لا يجوز؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تدريب نموذج أطول سياقَ على GPU محدود. تذكر أيضاً أن هذه التقنية لا تضمن دقة النموذج ولا تمنع استخدام جودة الأصل.",
+    "tuned_summary": "اذكر النتيجة وحدودها وما يحتاج إلى تحقق إضافي."
+  },
+  {
+    "id": "156",
+    "question": "قرّب لي Unsupervised Learning بتشبيه بسيط، ثم اربطه بهذا المثال: تجميع العملاء بحسب سلوك الشراء.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء.",
+    "tuned_summary": "التشبيه يسهّل البداية، ثم نرجع إلى التعريف التقني عند التطبيق."
+  },
+  {
+    "id": "157",
+    "question": "قرّب لي Reranking بتشبيه بسيط، ثم اربطه بهذا المثال: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "tuned_summary": "التشبيه يسهّل البداية، ثم نرجع إلى التعريف التقني عند التطبيق."
+  },
+  {
+    "id": "158",
+    "question": "أريد فحص Transformer Encoder في هذا المثال: ترميز جملة قبل تصنيفها. ما أول خطوة؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "ترميز جملة قبل تصنيفها.",
+    "tuned_summary": "التجربة المحدودة تكشف مبكراً إن كانت الفكرة مناسبة."
+  },
+  {
+    "id": "159",
+    "question": "في مشروع هدفه استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة، كيف أختار بين In-Context Learning وFine-Tuning؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "تعلم طريقة كتابة عناوين محتملة. وقارن النتيجة ببديل يستخدم Fine-Tuning.",
+    "tuned_summary": "اختر بناءً على هدف المسألة، لا على شهرة المصطلح."
+  },
+  {
+    "id": "160",
+    "question": "طبقت Reranking في حالة: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. ولم تتحسن النتيجة. كيف أشخص السبب؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "في حالة مثل: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. راجع عينة من الأخطاء بدلاً من الاكتفاء برقم واحد.",
+    "tuned_summary": "غيّر عاملاً واحداً في كل تجربة وسجّل النتيجة لتعرف سبب التحسن أو التراجع."
+  },
+  {
+    "id": "161",
+    "question": "سمعت مصطلح Data Leakage في حالة مثل: استخدام نتيجة مستقبلية ضمن خصائص التنبؤ. ما معناه ببساطة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": true,
+    "generic_summary": false,
+    "tuned_example": "استخدام نتيجة مستقبلية ضمن خصائص التنبؤ.",
+    "tuned_summary": "افهم وظيفة Data Leakage أولاً، ثم اختبره على بيانات مناسبة."
+  },
+  {
+    "id": "162",
+    "question": "أحتاج شرحاً في دقيقة عن Unsupervised Learning يذكر دوره في تعلم نمط قابل للتعميم من البيانات وحداً مهماً.",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استعادة فئات السكان عبر كластينغ.",
+    "tuned_summary": "تعريف واحد ومثال وحدّ واحد أفضل من قائمة مصطلحات بلا معنى."
+  },
+  {
+    "id": "163",
+    "question": "عند دراسة أثر LoRA Target Modules على تخصيص سلوك نموذج مدرب مسبقاً بكفاءة، كيف أقيس النتيجة بمقارنة عادلة؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "رفع صيغة flask إلى http-server.",
+    "tuned_summary": "اجمع القياس الكمي مع مراجعة عينات الأخطاء."
+  },
+  {
+    "id": "164",
+    "question": "قد يفشل DAX Measure لأن Measure ليست قيمة مخزنة لكل صف مثل calculated column. كيف أكتشف ذلك وأتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "tracking of sales per region.",
+    "tuned_summary": "اكتشف الفشل بعينة أخطاء، ثم أصلح السبب أو استخدم بديلاً أبسط."
+  },
+  {
+    "id": "165",
+    "question": "نشرت حلاً يستخدم Transformer Encoder في حالة: ترميز جملة قبل تصنيفها. ما إشارات التراجع أو سوء الاستخدام التي أراقبها؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "ترميز جملة قبل تصنيفها.",
+    "tuned_summary": "ضع حدوداً وتنبيهات ومراجعة بشرية للحالات عالية الأثر."
+  },
+  {
+    "id": "166",
+    "question": "إذا استخدمت Reranking في حالة: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. فما الذي يجوز استنتاجه وما الذي لا يجوز؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. تذكر أيضاً أن التعلم المعزز قد ينتج أسلوباً غير صحيحة ومغلوطة.",
+    "tuned_summary": "اذكر النتيجة وحدودها وما يحتاج إلى تحقق إضافي."
+  },
+  {
+    "id": "167",
+    "question": "متى يصبح Arabic NLP مهماً في حالة مثل: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. وكيف أتعامل معه؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة.",
+    "tuned_summary": "حدّد الهدف والقيود ثم قارن بخط أساس أبسط."
+  },
+  {
+    "id": "168",
+    "question": "اشرح Transformer Encoder لمبتدئ يريد ربط عناصر التسلسل بالسياق المناسب.",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "معالجة اللغة وتسميات المحادثة ضمن سياق طويل.",
+    "tuned_summary": "Transformer Encoder مفهوم له معنى محدد ولا يكفي اسمه للحكم على جودة الحل."
+  },
+  {
+    "id": "169",
+    "question": "قال زميلي إن Data Leakage لا يحتاج قياساً أو تحققاً، مع أن قد يعطي أرقاماً ممتازة تنهار في الواقع. كيف أصحح كلامه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "استرجاع قائمة من العينات بعد تقسيمها إلى فئات.",
+    "tuned_summary": "صحح الفكرة بالاعتماد على تجربة مضبوطة ومقياس مناسب."
+  },
+  {
+    "id": "170",
+    "question": "طبقت Arabic NLP في حالة: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. ولم تتحسن النتيجة. كيف أشخص السبب؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "في حالة مثل: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. راجع عينة من الأخطاء بدلاً من الاكتفاء برقم واحد.",
+    "tuned_summary": "غيّر عاملاً واحداً في كل تجربة وسجّل النتيجة لتعرف سبب التحسن أو التراجع."
+  },
+  {
+    "id": "171",
+    "question": "لدي هذا السيناريو: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. كيف أقرر إن كان Reranking جزءاً مناسباً من الحل؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "tuned_summary": "جرّب نطاقاً صغيراً، وقِس النتيجة قبل توسيع المشروع."
+  },
+  {
+    "id": "172",
+    "question": "إذا استخدمت Arabic NLP في حالة: توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. فما الذي يجوز استنتاجه وما الذي لا يجوز؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "توحيد بعض أشكال الألف قبل فهرسة بحثية مدروسة. تذكر أيضاً أن التعلم غير العشوائي قد ينتج نتائج خاطئة.",
+    "tuned_summary": "اذكر النتيجة وحدودها وما يحتاج إلى تحقق إضافي."
+  },
+  {
+    "id": "173",
+    "question": "مبتدئ تعامل مع DAX Measure وتجاهل أن Measure ليست قيمة مخزنة لكل صف مثل calculated column. ما الخطأ في طريقته؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "حساب اكتشاف المبيعات بعد فحص الطلب.",
+    "tuned_summary": "راجع البيانات وخط الأساس وحالات الخطأ قبل تغيير التقنية."
+  },
+  {
+    "id": "174",
+    "question": "قد يفشل Data Leakage لأن قد يعطي أرقاماً ممتازة تنهار في الواقع. كيف أكتشف ذلك وأتعامل معه؟",
+    "classification": "Partially Correct / Misleading",
+    "meaningless_example": false,
+    "generic_summary": true,
+    "tuned_example": "قياس دخول النظام بعد تنفيذ التدريب الساخ.",
+    "tuned_summary": "اكتشف الفشل بعينة أخطاء، ثم أصلح السبب أو استخدم بديلاً أبسط."
+  },
+  {
+    "id": "175",
+    "question": "طبقت Unsupervised Learning في حالة: تجميع العملاء بحسب سلوك الشراء. ولم تتحسن النتيجة. كيف أشخص السبب؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "في حالة مثل: تجميع العملاء بحسب سلوك الشراء. راجع عينة من الأخطاء بدلاً من الاكتفاء برقم واحد.",
+    "tuned_summary": "غيّر عاملاً واحداً في كل تجربة وسجّل النتيجة لتعرف سبب التحسن أو التراجع."
+  },
+  {
+    "id": "176",
+    "question": "نشرت حلاً يستخدم Reranking في حالة: إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة. ما إشارات التراجع أو سوء الاستخدام التي أراقبها؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "إعادة ترتيب أفضل عشرين مقطعاً قبل اختيار خمسة.",
+    "tuned_summary": "ضع حدوداً وتنبيهات ومراجعة بشرية للحالات عالية الأثر."
+  },
+  {
+    "id": "177",
+    "question": "أحاول ربط عناصر التسلسل بالسياق المناسب. ما دور Transformer Encoder في فهم هذا العمل أو تنفيذه؟",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "تعلم قواعد خطوات الطباعة من الرموز.",
+    "tuned_summary": "تعامل مع Transformer Encoder وفق هدف المشكلة والبيانات والقياس المتاح."
+  },
+  {
+    "id": "178",
+    "question": "إذا استخدمت Unsupervised Learning في حالة: تجميع العملاء بحسب سلوك الشراء. فما الذي يجوز استنتاجه وما الذي لا يجوز؟",
+    "classification": "Incorrect",
+    "meaningless_example": true,
+    "generic_summary": true,
+    "tuned_example": "تجميع العملاء بحسب سلوك الشراء. تذكر أيضاً أن التجميع قد ينتج أقساماً جديدة وفقاً لترتيب الحالات.",
+    "tuned_summary": "اذكر النتيجة وحدودها وما يحتاج إلى تحقق إضافي."
+  },
+  {
+    "id": "179",
+    "question": "اشرح LoRA Target Modules لمبتدئ يريد تخصيص سلوك نموذج مدرب مسبقاً بكفاءة.",
+    "classification": "Mostly Correct / Minor Issue",
+    "meaningless_example": false,
+    "generic_summary": false,
+    "tuned_example": "التعلم القليل لتحسين خوارزمية تصنيف قديمة.",
+    "tuned_summary": "LoRA Target Modules مفهوم له معنى محدد ولا يكفي اسمه للحكم على جودة الحل."
+  }
+]

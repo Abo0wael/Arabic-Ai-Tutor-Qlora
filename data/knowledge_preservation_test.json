@@ -1,0 +1,302 @@
+[
+  {
+    "question": "عرف Descriptive Statistics واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Descriptive Statistics: مقاييس تلخص توزيع البيانات مثل المتوسط والوسيط والتشتت. ويُستخدم عادة في إطار تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص",
+    "topic": "data_analysis_tools",
+    "concept_id": "descriptive-statistics"
+  },
+  {
+    "question": "عرف Neural Network واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Neural Network: نموذج من طبقات تحويلات قابلة للتعلم ودوال غير خطية. ويُستخدم عادة في إطار تمثيل علاقات معقدة بواسطة شبكات عصبية",
+    "topic": "deep_learning",
+    "concept_id": "neural-network"
+  },
+  {
+    "question": "عرف Regression واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Regression: مهمة تتنبأ بقيمة عددية مستمرة. ويُستخدم عادة في إطار تعلم نمط قابل للتعميم من البيانات",
+    "topic": "machine_learning",
+    "concept_id": "regression"
+  },
+  {
+    "question": "عرف Baseline واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Baseline: حل مرجعي بسيط نقارن به النموذج الأكثر تعقيداً. ويُستخدم عادة في إطار بناء نظام ذكي مسؤول يمكن قياسه ومراجعته",
+    "topic": "ai_fundamentals",
+    "concept_id": "baseline"
+  },
+  {
+    "question": "عرف Text Summarization واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Text Summarization: إنتاج نص أقصر يحافظ على المعلومات الأهم من المصدر. ويُستخدم عادة في إطار معالجة اللغة وتقييم مخرجاتها في سياق واضح",
+    "topic": "nlp",
+    "concept_id": "text-summarization"
+  },
+  {
+    "question": "عرف Text Classification واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Text Classification: إسناد نص إلى فئة أو عدة فئات محددة. ويُستخدم عادة في إطار معالجة اللغة وتقييم مخرجاتها في سياق واضح",
+    "topic": "nlp",
+    "concept_id": "text-classification"
+  },
+  {
+    "question": "عرف Lemmatization واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Lemmatization: إرجاع الكلمة إلى صيغة معجمية اعتماداً على تحليلها. ويُستخدم عادة في إطار معالجة اللغة وتقييم مخرجاتها في سياق واضح",
+    "topic": "nlp",
+    "concept_id": "lemmatization"
+  },
+  {
+    "question": "عرف Activation Functions واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Activation Functions: دوال تحول خرج الطبقة وتضيف لاخطية إلى الشبكة. ويُستخدم عادة في إطار تمثيل علاقات معقدة بواسطة شبكات عصبية",
+    "topic": "deep_learning",
+    "concept_id": "activation-functions"
+  },
+  {
+    "question": "عرف Feature Engineering واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Feature Engineering: إنشاء أو تحويل خصائص تساعد النموذج على تمثيل المسألة. ويُستخدم عادة في إطار تعلم نمط قابل للتعميم من البيانات",
+    "topic": "machine_learning",
+    "concept_id": "feature-engineering"
+  },
+  {
+    "question": "عرف SQL JOIN واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "SQL JOIN: عملية تربط صفوف جداول وفق شرط بين مفاتيح أو أعمدة. ويُستخدم عادة في إطار تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص",
+    "topic": "data_analysis_tools",
+    "concept_id": "sql-join"
+  },
+  {
+    "question": "عرف Full Fine-Tuning واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Full Fine-Tuning: تحديث جميع أو معظم أوزان النموذج أثناء التدريب الإضافي. ويُستخدم عادة في إطار تخصيص سلوك نموذج مدرب مسبقاً بكفاءة",
+    "topic": "fine_tuning_lora_qlora",
+    "concept_id": "full-fine-tuning"
+  },
+  {
+    "question": "عرف Recall واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Recall: مقياس استرجاع يساوي نسبة الحالات الإيجابية التي اكتشفها النموذج من كل الإيجابيات الحقيقية. ويُستخدم عادة في إطار تعلم نمط قابل للتعميم من البيانات",
+    "topic": "machine_learning",
+    "concept_id": "recall"
+  },
+  {
+    "question": "عرف NF4 Quantization واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "NF4 Quantization: صيغة 4-bit مصممة لتمثيل أوزان موزعة تقريباً كالتوزيع الطبيعي بكفاءة. ويُستخدم عادة في إطار تخصيص سلوك نموذج مدرب مسبقاً بكفاءة",
+    "topic": "fine_tuning_lora_qlora",
+    "concept_id": "nf4"
+  },
+  {
+    "question": "عرف In-Context Learning واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "In-Context Learning: تكيّف مؤقت مع تعليمات أو أمثلة داخل السياق من دون تحديث الأوزان. ويُستخدم عادة في إطار استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة",
+    "topic": "llms",
+    "concept_id": "in-context-learning"
+  },
+  {
+    "question": "عرف Overfitting واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Overfitting: تعلم تفاصيل وضوضاء بيانات التدريب بما يضعف التعميم. ويُستخدم عادة في إطار تعلم نمط قابل للتعميم من البيانات",
+    "topic": "machine_learning",
+    "concept_id": "overfitting"
+  },
+  {
+    "question": "عرف Human in the Loop واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Human in the Loop: إدخال مراجعة أو قرار بشري في نقاط محددة من دورة النظام. ويُستخدم عادة في إطار بناء نظام ذكي مسؤول يمكن قياسه ومراجعته",
+    "topic": "ai_fundamentals",
+    "concept_id": "human-in-the-loop"
+  },
+  {
+    "question": "عرف SQL Window Functions واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "SQL Window Functions: حسابات عبر نافذة من الصفوف مع الحفاظ على كل صف. ويُستخدم عادة في إطار تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص",
+    "topic": "data_analysis_tools",
+    "concept_id": "sql-window-functions"
+  },
+  {
+    "question": "عرف Stemming واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Stemming: اختزال الكلمات بقواعد تقريبية إلى جذع مشترك. ويُستخدم عادة في إطار معالجة اللغة وتقييم مخرجاتها في سياق واضح",
+    "topic": "nlp",
+    "concept_id": "stemming"
+  },
+  {
+    "question": "عرف Sentiment Analysis واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Sentiment Analysis: تصنيف موقف أو شعور معبّر عنه في نص ضمن تعريف محدد. ويُستخدم عادة في إطار معالجة اللغة وتقييم مخرجاتها في سياق واضح",
+    "topic": "nlp",
+    "concept_id": "sentiment-analysis"
+  },
+  {
+    "question": "عرف Reranking واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Reranking: إعادة ترتيب مرشحين مسترجعين بنموذج أدق بعد استرجاع أولي سريع. ويُستخدم عادة في إطار استرجاع دليل خارجي ذي صلة قبل التوليد",
+    "topic": "rag_vector_databases",
+    "concept_id": "reranking"
+  },
+  {
+    "question": "عرف Adapter Checkpoint واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Adapter Checkpoint: حفظ أوزان adapter وحالة التدريب اللازمة للاستئناف من دون نسخة كاملة للقاعدة. ويُستخدم عادة في إطار تخصيص سلوك نموذج مدرب مسبقاً بكفاءة",
+    "topic": "fine_tuning_lora_qlora",
+    "concept_id": "adapter-checkpoint"
+  },
+  {
+    "question": "عرف Vectorization in Python واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Vectorization in Python: تنفيذ عملية على مصفوفة أو عمود بدلاً من حلقة Python صفاً صفاً. ويُستخدم عادة في إطار تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص",
+    "topic": "data_analysis_tools",
+    "concept_id": "python-vectorization"
+  },
+  {
+    "question": "عرف QLoRA واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "QLoRA: تدريب LoRA فوق نموذج أساسي مجمد محمل عادة بدقة 4-bit. ويُستخدم عادة في إطار تخصيص سلوك نموذج مدرب مسبقاً بكفاءة",
+    "topic": "fine_tuning_lora_qlora",
+    "concept_id": "qlora"
+  },
+  {
+    "question": "عرف Gradient Checkpointing واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Gradient Checkpointing: إعادة حساب بعض التنشيطات في backward لتوفير الذاكرة. ويُستخدم عادة في إطار تمثيل علاقات معقدة بواسطة شبكات عصبية",
+    "topic": "deep_learning",
+    "concept_id": "gradient-checkpointing"
+  },
+  {
+    "question": "عرف Power BI Data Model واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Power BI Data Model: تنظيم الجداول والعلاقات والمقاييس التي تغذي التقرير. ويُستخدم عادة في إطار تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص",
+    "topic": "data_analysis_tools",
+    "concept_id": "power-bi-data-model"
+  },
+  {
+    "question": "عرف System Prompt واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "System Prompt: تعليمات عليا تضبط الدور والسلوك المتوقع للمساعد. ويُستخدم عادة في إطار استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة",
+    "topic": "llms",
+    "concept_id": "system-prompt"
+  },
+  {
+    "question": "عرف Learning vs Rules واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Learning vs Rules: التعلم يستنتج نمطاً من أمثلة، بينما النظام القاعدي ينفذ قواعد كتبها البشر. ويُستخدم عادة في إطار بناء نظام ذكي مسؤول يمكن قياسه ومراجعته",
+    "topic": "ai_fundamentals",
+    "concept_id": "machine-learning-vs-rules"
+  },
+  {
+    "question": "عرف LLM Evaluation واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "LLM Evaluation: قياس جودة نموذج لغوي على مهام وبيانات ومعايير محددة. ويُستخدم عادة في إطار استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة",
+    "topic": "llms",
+    "concept_id": "llm-evaluation"
+  },
+  {
+    "question": "عرف Data Leakage واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Data Leakage: وصول التدريب أو الخصائص إلى معلومات لن تكون متاحة وقت الاستخدام أو إلى بيانات التقييم. ويُستخدم عادة في إطار بناء نظام ذكي مسؤول يمكن قياسه ومراجعته",
+    "topic": "ai_fundamentals",
+    "concept_id": "data-leakage"
+  },
+  {
+    "question": "عرف Supervised Learning واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Supervised Learning: تعلم نموذج من أمثلة لها مدخلات وتسميات معروفة. ويُستخدم عادة في إطار تعلم نمط قابل للتعميم من البيانات",
+    "topic": "machine_learning",
+    "concept_id": "supervised-learning"
+  },
+  {
+    "question": "عرف Learning Rate واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Learning Rate: معامل يحدد حجم خطوة تحديث الأوزان. ويُستخدم عادة في إطار تمثيل علاقات معقدة بواسطة شبكات عصبية",
+    "topic": "deep_learning",
+    "concept_id": "learning-rate"
+  },
+  {
+    "question": "عرف DAX Measure واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "DAX Measure: تعبير يُحسب حسب Filter Context الحالي في Power BI. ويُستخدم عادة في إطار تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص",
+    "topic": "data_analysis_tools",
+    "concept_id": "dax-measure"
+  },
+  {
+    "question": "عرف Transformer واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Transformer: بنية تسلسلية تعتمد على Attention وطبقات تحويل مع معلومات موضعية. ويُستخدم عادة في إطار ربط عناصر التسلسل بالسياق المناسب",
+    "topic": "transformers_attention",
+    "concept_id": "transformer"
+  },
+  {
+    "question": "عرف Missing Values واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Missing Values: حقول لا تحتوي قيمة مسجلة وقد يكون غيابها ذا معنى. ويُستخدم عادة في إطار تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص",
+    "topic": "data_analysis_tools",
+    "concept_id": "missing-values"
+  },
+  {
+    "question": "عرف Loss Function واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Loss Function: دالة عددية تقيس خطأ النموذج بالنسبة لهدف التدريب. ويُستخدم عادة في إطار تمثيل علاقات معقدة بواسطة شبكات عصبية",
+    "topic": "deep_learning",
+    "concept_id": "loss-function"
+  },
+  {
+    "question": "عرف Correlation vs Causation واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Correlation vs Causation: الارتباط تزامن تغير متغيرين؛ السببية تعني أن تغيير أحدهما يؤثر في الآخر. ويُستخدم عادة في إطار تحويل بيانات موثوقة إلى وصف أو قرار قابل للفحص",
+    "topic": "data_analysis_tools",
+    "concept_id": "correlation-causation"
+  },
+  {
+    "question": "عرف Grounded Answer واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Grounded Answer: إجابة يمكن ربط ادعاءاتها بدليل مسترجع مناسب. ويُستخدم عادة في إطار استرجاع دليل خارجي ذي صلة قبل التوليد",
+    "topic": "rag_vector_databases",
+    "concept_id": "grounded-answer"
+  },
+  {
+    "question": "عرف Training Set واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Training Set: جزء البيانات المستخدم لحساب التدرجات وتحديث معاملات النموذج. ويُستخدم عادة في إطار تعلم نمط قابل للتعميم من البيانات",
+    "topic": "machine_learning",
+    "concept_id": "train-set"
+  },
+  {
+    "question": "عرف Underfitting واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Underfitting: حالة لا يتعلم فيها النموذج نمطاً كافياً حتى على بيانات التدريب. ويُستخدم عادة في إطار تعلم نمط قابل للتعميم من البيانات",
+    "topic": "machine_learning",
+    "concept_id": "underfitting"
+  },
+  {
+    "question": "عرف RNN واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "RNN: شبكة تمرر حالة بين خطوات تسلسل مرتب. ويُستخدم عادة في إطار تمثيل علاقات معقدة بواسطة شبكات عصبية",
+    "topic": "deep_learning",
+    "concept_id": "rnn"
+  },
+  {
+    "question": "عرف Semantic Search واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Semantic Search: استرجاع نتائج بقرب المعنى في فضاء Embeddings. ويُستخدم عادة في إطار استرجاع دليل خارجي ذي صلة قبل التوليد",
+    "topic": "rag_vector_databases",
+    "concept_id": "semantic-search"
+  },
+  {
+    "question": "عرف Dropout واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Dropout: أسلوب تنظيم يعطل وحدات عشوائياً أثناء التدريب. ويُستخدم عادة في إطار تمثيل علاقات معقدة بواسطة شبكات عصبية",
+    "topic": "deep_learning",
+    "concept_id": "dropout"
+  },
+  {
+    "question": "عرف Fine-Tuning واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Fine-Tuning: تدريب إضافي لنموذج مدرب مسبقاً لتخصيص سلوكه أو مهمته. ويُستخدم عادة في إطار تخصيص سلوك نموذج مدرب مسبقاً بكفاءة",
+    "topic": "fine_tuning_lora_qlora",
+    "concept_id": "fine-tuning"
+  },
+  {
+    "question": "عرف RAG واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "RAG: نهج يسترجع مقاطع من مصدر خارجي ثم يضعها في سياق نموذج مولد. ويُستخدم عادة في إطار استرجاع دليل خارجي ذي صلة قبل التوليد",
+    "topic": "rag_vector_databases",
+    "concept_id": "rag"
+  },
+  {
+    "question": "عرف Attention واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Attention: آلية تحسب أوزاناً لربط كل موضع بأجزاء سياق مهمة. ويُستخدم عادة في إطار ربط عناصر التسلسل بالسياق المناسب",
+    "topic": "transformers_attention",
+    "concept_id": "attention"
+  },
+  {
+    "question": "عرف Backpropagation واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Backpropagation: طريقة لحساب تدرجات الخسارة عبر طبقات الشبكة باستخدام قاعدة السلسلة. ويُستخدم عادة في إطار تمثيل علاقات معقدة بواسطة شبكات عصبية",
+    "topic": "deep_learning",
+    "concept_id": "backpropagation"
+  },
+  {
+    "question": "عرف Top-p Sampling واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Top-p Sampling: اختيار الرمز من أصغر مجموعة يصل مجموع احتمالها إلى حد محدد. ويُستخدم عادة في إطار استخدام نموذج لغوي مع ضبط وتقييم وحدود واضحة",
+    "topic": "llms",
+    "concept_id": "top-p"
+  },
+  {
+    "question": "عرف Classification واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Classification: مهمة تصنيف تتنبأ بفئة منفصلة أو أكثر لكل مثال. ويُستخدم عادة في إطار تعلم نمط قابل للتعميم من البيانات",
+    "topic": "machine_learning",
+    "concept_id": "classification"
+  },
+  {
+    "question": "عرف Causal Mask واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Causal Mask: قناع يمنع الموضع من استخدام رموز لاحقة عند تعلم التنبؤ التالي. ويُستخدم عادة في إطار ربط عناصر التسلسل بالسياق المناسب",
+    "topic": "transformers_attention",
+    "concept_id": "causal-mask"
+  },
+  {
+    "question": "عرف Reproducibility واشرح فائدته الأساسية في بضع جمل قصيرة.",
+    "expected_fact": "Reproducibility: قدرة فريق على إعادة تجربة بإعدادات وبيانات وبيئة موثقة والحصول على نتيجة متقاربة. ويُستخدم عادة في إطار بناء نظام ذكي مسؤول يمكن قياسه ومراجعته",
+    "topic": "ai_fundamentals",
+    "concept_id": "reproducibility"
+  }
+]
