@@ -119,63 +119,13 @@ Validation loss decreased consistently from **2.5738** to **2.5073** without div
 
 ---
 
-## Base vs. Fine-Tuned (Qualitative Highlights)
+## Base vs Fine-Tuned
 
-Both models were evaluated on the 25 held-out test prompts using identical deterministic generation settings (`temperature=0.0`, greedy decoding, `repetition_penalty=1.1`, `max_new_tokens=384`) and the identical minimal neutral system prompt.
+The following example shows how the fine-tuned model produces a clearer, more structured tutoring response compared with the base Qwen3-1.7B model.
 
-Below are representative unedited excerpts from [`outputs/comparison_v3_2.json`](outputs/comparison_v3_2.json). Additional comparisons are cataloged in [`examples/base_vs_finetuned.md`](examples/base_vs_finetuned.md).
+![Base Qwen3-1.7B vs Fine-Tuned V3.2](Base%20Qwen3-1.7B%20vs.%20Fine-Tuned.png)
 
-### 1. Structured Explanation (Adherence to Formatting)
-**Prompt**: *اشرح لي تقنية Overfitting بالتفصيل المنظم مع توضيح: التعريف المختصر، الشرح المبسط، المثال العملي، والخلاصة.*
-
-- **Fine-Tuned V3.2**:
-  ```markdown
-  **التعريف المختصر:**  
-  Overfitting هو حالة من التعلم غير الطبيعي حيث يتعلم النموذج معلوماته في البيانات المدفوعة (training data) بشكل كبير ويتقاطع هذا مع بيانات القياسات الجديدة (test data).  
-
-  **الشرح المبسط:**  
-  يتم تصميم نموذج لتناسب البيانات المدفوعة بدرجة عالية من الدقة، لكن عند استخدامه على بيانات جديدة لا تُظهر دقة عالية.  
-
-  **المثال العملي:**  
-  نستخدم نموذج لتنبؤ بطلب العملاء في متاجر السوشيال ميديا...
-
-  **الخلاصة:**  
-  Overfitting هو خطأ في التصميم أو التحليل الذي يؤدي إلى تقليل دقة النموذج في التنبؤ بدقة البيانات الجديدة.
-  ```
-- **Base Qwen3-1.7B**: Included conversational preamble (*"بالطبع! إليك شرح مفصل..."*), generated informal analogies (*"يحتوي النموذج على مnesia كبيرة"*), and hit max tokens before finishing the summary section.
-- **Significance**: Because the system prompt contained **no section guidelines**, this demonstrates autonomous structural adherence learned directly from training data.
-
----
-
-### 2. Domain Grounding vs. Lexical Confusion
-**Prompt**: *هل كبر حجم النموذج اللغوي (مثلاً 70 مليار معامل) يضمن القضاء التام على الهلوسة بنسبة 100%؟*
-
-- **Fine-Tuned V3.2**:
-  > *"الإجابة: لا، لا يمكن أن تُحقق نسبة 100% من القضاء التام على الهلوسة بوجود نموذج مُدرَّب لغوي كبير مثل 70 مليار معامل."*  
-  *(Accurately maintained the AI/NLP engineering context).*
-- **Base Qwen3-1.7B**:
-  > *"لا، لا يمكن أن تضمن... الهلوسة قد تكون متنوعة في النوع والطبيعة، مثل الهلوسة العقلية... الهلوسة الجسدية (مثل الشعور بأنك تُمسك بجسم آخر)... العوامل البيولوجية والنفسية: الأمراض النفسية، الإصابة، أو التغيرات الهرمونية..."*  
-  *(Confused technical LLM hallucination with psychiatric clinical disorders).*
-
----
-
-### 3. Brevity & Concise Definition
-**Prompt**: *ما المقصود بـ Hallucination in LLMs بعبارة موجزة في سطرين؟*
-
-- **Fine-Tuned V3.2**:
-  > *"الإجابة: تشير إلى ظهور أخطاء أو نتائج غير صحيحة من النصوص المدخلة."* (Direct 1-line answer, 66 characters).
-- **Base Qwen3-1.7B**:
-  > *"الهالكونشين (Hallucination) هي ظاهرة تحدث عندما ينتج نموذج الذكاء الاصطناعي أفكارًا غير صحيحة..."* (Invented awkward phonetic transliteration *"الهالكونشين"*).
-
----
-
-### 4. Documented Limitation: Language Drift
-**Prompt**: *عرف Overfitting في سطرين مباشرين.*
-
-- **Fine-Tuned V3.2**:
-  > *"Overfitting is when a model learns the training data too well, including noise and irrelevant details that may not generalize to new data..."*
-- **Base Qwen3-1.7B**: Answered in Arabic.
-- **Analysis**: Because the prompt began with the Latin term `Overfitting` and the minimal neutral prompt lacked a rigid language constraint, the fine-tuned model defaulted to an English completion on 3 out of 25 prompts.
+> The fine-tuned model shows improved structure and presentation on this example, while the project limitations are documented below. For the complete unedited 7-prompt comparative logs, see [`examples/base_vs_finetuned.md`](examples/base_vs_finetuned.md).
 
 ---
 
@@ -223,6 +173,7 @@ Below are representative unedited excerpts from [`outputs/comparison_v3_2.json`]
 │   └── utils.py                     # Configuration loader, device & model utilities
 ├── app/
 │   └── app.py                       # Local Streamlit chat interface
+├── Base Qwen3-1.7B vs. Fine-Tuned.png # Visual side-by-side comparison
 ├── requirements.txt                 # Pinned Python dependencies
 └── README.md                        # Documentation & experiment guide
 ```
