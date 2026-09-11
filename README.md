@@ -190,8 +190,8 @@ The following example shows how the fine-tuned model produces a clearer, more st
 ### Setup
 ```powershell
 # 1. Clone the repository
-git clone https://github.com/your-username/arabic-ai-tutor.git
-cd "arabic-ai-tutor"
+git clone https://github.com/Abo0wael/Arabic-Ai-Tutor-Qlora.git
+cd Arabic-Ai-Tutor-Qlora
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
