@@ -1,6 +1,13 @@
 # Arabic AI Tutor — Fine-Tuned Qwen3-1.7B with QLoRA
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://arabic-ai-tutor-qlora.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Abo0wael-181717?style=for-the-badge&logo=github)](https://github.com/Abo0wael/Arabic-Ai-Tutor-Qlora)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ahmed_Wael-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/ahmed-wael-9a6a5938a)
+
 An engineering demonstration of parameter-efficient fine-tuning (**QLoRA**) to adapt **Qwen3-1.7B** into a specialized Arabic AI and Machine Learning tutor on consumer hardware (single laptop GPU).
+
+> 🌐 **Live Web Application**: [https://arabic-ai-tutor-qlora.vercel.app/](https://arabic-ai-tutor-qlora.vercel.app/)  
+> *(Frontend hosted on Vercel; serves real-time AI responses via Cloudflare Tunnel directly from an RTX 5070 laptop GPU)*
 
 ---
 
@@ -38,7 +45,7 @@ flowchart TD
     E --> F[Single-Epoch Optimizer Run<br/>paged_adamw_8bit, 54 Steps, Cosine LR]
     F --> G[Saved Adapter: outputs/adapter_v3_2/<br/>6.44 MB Weights]
     G --> H[Deterministic Evaluation Suite<br/>25 Benchmark Questions vs. Base]
-    G --> I[Local CLI & Streamlit UI<br/>Inference Engine]
+    G --> I[Next.js 15 Web App on Vercel<br/>via Cloudflare Tunnel + RTX 5070]
 ```
 
 ---
@@ -180,7 +187,7 @@ The following example shows how the fine-tuned model produces a clearer, more st
 │   └── requirements.txt             # Backend dependencies
 ├── frontend/                        # Next.js 15 App Router portfolio web app
 │   ├── app/                         # App Router layout, globals, page
-│   ├── components/                  # Navbar, Hero, ChatInterface, ModelInfo, Disclaimer
+│   ├── components/                  # Navbar, Hero, ChatInterface, DeveloperCard, Footer
 │   ├── lib/tutorApi.ts              # API client for local/tunnel backend
 │   └── package.json                 # Next.js, Tailwind, TypeScript dependencies
 ├── docs/
@@ -206,6 +213,8 @@ The following example shows how the fine-tuned model produces a clearer, more st
 ---
 
 ## Deployment Architecture
+
+> 🚀 **Live Production Deployment**: [https://arabic-ai-tutor-qlora.vercel.app/](https://arabic-ai-tutor-qlora.vercel.app/)
 
 This project is architected for **100% free hosting** while keeping high-performance local GPU inference:
 
