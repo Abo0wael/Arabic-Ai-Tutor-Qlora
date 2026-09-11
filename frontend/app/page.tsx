@@ -2,8 +2,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ChatInterface from "@/components/ChatInterface";
-import ModelInfo from "@/components/ModelInfo";
-import Disclaimer from "@/components/Disclaimer";
+import DeveloperCard from "@/components/DeveloperCard";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,8 +12,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <ChatInterface />
-        <ModelInfo />
-        <Disclaimer />
+        <DeveloperCard />
       </main>
       <Footer />
     </div>

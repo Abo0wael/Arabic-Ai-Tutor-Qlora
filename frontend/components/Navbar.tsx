@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Sparkles, Github, Activity, Wifi, WifiOff } from "lucide-react";
+import { Sparkles, Github, Linkedin, Activity, Wifi, WifiOff } from "lucide-react";
 import { checkHealth, HealthStatus } from "@/lib/tutorApi";
 
 export default function Navbar() {
@@ -86,12 +86,25 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* GitHub link */}
+          {/* LinkedIn link */}
           <a
-            href="https://github.com/Abo0wael/Arabic-Ai-Tutor-Qlora"
+            href="https://www.linkedin.com/in/ahmed-wael-9a6a5938a"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium text-slate-300 bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] transition-all hover:text-white"
+            title="LinkedIn Profile"
+          >
+            <Linkedin className="w-4 h-4 text-[#0a66c2]" />
+            <span className="hidden sm:inline">LinkedIn</span>
+          </a>
+
+          {/* GitHub link */}
+          <a
+            href="https://github.com/Abo0wael"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium text-slate-300 bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] transition-all hover:text-white"
+            title="GitHub Profile"
           >
             <Github className="w-4 h-4" />
             <span className="hidden sm:inline">GitHub</span>
