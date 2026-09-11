@@ -21,6 +21,13 @@ env/
 # Environment Variables & Secrets
 .env
 *.env
+.env*.local
+
+# Node.js & Next.js
+node_modules/
+.next/
+out/
+build/
 
 # Logs & Monitoring
 *.log

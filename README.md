@@ -172,11 +172,61 @@ The following example shows how the fine-tuned model produces a clearer, more st
 │   ├── train.py                     # QLoRA training script with memory tracking
 │   └── utils.py                     # Configuration loader, device & model utilities
 ├── app/
-│   └── app.py                       # Local Streamlit chat interface
+│   └── app.py                       # Local Streamlit chat interface (legacy demo)
+├── backend/                         # Local FastAPI GPU backend (RTX 5070)
+│   ├── main.py                      # FastAPI app with CORS & lifespan GPU management
+│   ├── model_service.py             # Serialized 4-bit inference service
+│   ├── schemas.py                   # Pydantic request/response schemas
+│   └── requirements.txt             # Backend dependencies
+├── frontend/                        # Next.js 15 App Router portfolio web app
+│   ├── app/                         # App Router layout, globals, page
+│   ├── components/                  # Navbar, Hero, ChatInterface, ModelInfo, Disclaimer
+│   ├── lib/tutorApi.ts              # API client for local/tunnel backend
+│   └── package.json                 # Next.js, Tailwind, TypeScript dependencies
+├── docs/
+│   ├── LOCAL_GPU_DEPLOYMENT.md      # Step-by-step free Vercel + Cloudflare Tunnel guide
+│   └── results_summary.md           # Executive metric summary
+├── examples/
+│   └── base_vs_finetuned.md         # Detailed qualitative comparison logs
+├── outputs/
+│   ├── adapter_v3_2/                # Final trained LoRA adapter (6.44 MB)
+│   └── comparison_v3_2.json         # Raw evaluation outputs (Base vs. Tuned)
+├── src/
+│   ├── compare_models.py            # Side-by-side deterministic evaluation script
+│   ├── dataset_integrity.py         # Near-duplicate & leakage validation
+│   ├── inference.py                 # CLI & programmatic inference module
+│   ├── prepare_data.py              # Data preprocessing and split pipeline
+│   ├── train.py                     # QLoRA training script with memory tracking
+│   └── utils.py                     # Configuration loader, device & model utilities
 ├── Base Qwen3-1.7B vs. Fine-Tuned.png # Visual side-by-side comparison
 ├── requirements.txt                 # Pinned Python dependencies
 └── README.md                        # Documentation & experiment guide
 ```
+
+---
+
+## Deployment Architecture
+
+This project is architected for **100% free hosting** while keeping high-performance local GPU inference:
+
+```
+User Browser
+    ↓
+Next.js Frontend (Vercel Hobby Plan)
+    ↓
+Cloudflare Tunnel (HTTPS)
+    ↓
+Local FastAPI Backend (laptop)
+    ↓
+Local NVIDIA RTX 5070 GPU (Qwen3-1.7B + QLoRA V3.2)
+```
+
+- **Frontend on Vercel**: Premium dark AI SaaS interface with full Arabic RTL support, interactive chat, suggested prompts, and automatic offline detection.
+- **Local GPU Inference**: The fine-tuned 4-bit model runs directly on your RTX 5070 GPU (~1.27 GiB VRAM), ensuring zero cloud GPU costs.
+- **Cloudflare Tunnel**: Free, secure HTTPS bridge connecting Vercel to your local FastAPI server without port forwarding.
+- **Online/Offline Handling**: When the local laptop is powered off, the Vercel frontend stays live and displays a friendly notice explaining that this is a local hardware demonstration.
+
+> For complete step-by-step deployment instructions, see [LOCAL_GPU_DEPLOYMENT.md](file:///d:/My%20Projects/My%20projects/Arabic%20AI%20Tutor%20%E2%80%94%20Fine-Tuned%20Qwen%20with%20QLoRA/docs/LOCAL_GPU_DEPLOYMENT.md).
 
 ---
 
@@ -185,6 +235,7 @@ The following example shows how the fine-tuned model produces a clearer, more st
 ### Prerequisites
 - Windows 10/11 or Linux
 - Python 3.11 or 3.12 (64-bit)
+- Node.js 20+ (for frontend)
 - NVIDIA GPU with $\ge 6$ GiB VRAM (CUDA 12.x supported)
 
 ### Setup
@@ -202,6 +253,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 # 4. Install repository dependencies
 pip install -r requirements.txt
+pip install -r backend/requirements.txt
 ```
 
 ---
@@ -219,13 +271,25 @@ Ask a single question:
 python -m src.inference --config configs/training_config.yaml --question "اشرح لي مفهوم الـ Overfitting بمثال عملي"
 ```
 
-Run using the base model only (without adapter):
+### 2. Local FastAPI Backend (GPU Server)
+Launch the local API server on your RTX 5070:
 ```powershell
-python -m src.inference --config configs/training_config.yaml --base --question "ما هو Overfitting؟"
+uvicorn backend.main:app --host 0.0.0.0 --port 8000
+```
+Then expose it via Cloudflare Tunnel:
+```powershell
+cloudflared tunnel --url http://localhost:8000
 ```
 
-### 2. Local Streamlit Web Interface
-Launch the browser UI:
+### 3. Next.js Web Frontend
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+Open `http://localhost:3000` to interact with the tutor.
+
+### 4. Legacy Streamlit Interface
 ```powershell
 streamlit run app/app.py
 ```
